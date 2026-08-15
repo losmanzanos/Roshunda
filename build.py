@@ -11,6 +11,7 @@ STAGE_1    = b64('source/art-stage-1.webp')
 STAGE_2    = b64('source/art-stage-2.webp')
 STAGE_3    = b64('source/art-stage-3.webp')
 GREENHOUSE = b64('source/art-greenhouse.webp')
+SUN        = b64('source/art-sun.webp')
 
 HTML = r'''<!DOCTYPE html>
 <html lang="en">
@@ -195,6 +196,8 @@ img{display:block;max-width:100%}
 
 /* ---------------- workshops ---------------- */
 .shops{background:var(--paper-2);padding:clamp(4.5rem,10vw,8rem) 0}
+.sun-plate{margin:0 0 clamp(2rem,4vw,3.2rem);overflow:hidden}
+.sun-plate img{max-height:clamp(210px,42vh,420px);width:100%;object-fit:cover;object-position:50% 34%}
 .shops-head{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,4rem);align-items:end;margin-bottom:clamp(2.5rem,5vw,4rem)}
 .shops-head h2{max-width:15ch}
 .shops-head p{color:var(--bark-2);margin:0 0 .4rem;max-width:36ch}
@@ -475,6 +478,9 @@ footer{background:var(--leaf-deep);color:rgba(251,246,234,.68);padding:clamp(3.5
 
 <section class="shops" id="shops">
   <div class="shell">
+    <figure class="plate sun-plate rise">
+      <img src="__SUN__" alt="Watercolour of a sun high over a field of scrub and grasses" loading="lazy">
+    </figure>
     <div class="shops-head">
       <h2 class="rise">Workshops and groups, coming soon.</h2>
       <p class="rise" data-d="1">Still taking shape. Tell me what you would want to be in the room for and I will build with that in mind.</p>
@@ -692,6 +698,7 @@ HTML = (HTML.replace('__HERO_ART__', HERO_ART)
             .replace('__STAGE_2__', STAGE_2)
             .replace('__STAGE_3__', STAGE_3)
             .replace('__GREENHOUSE__', GREENHOUSE)
+            .replace('__SUN__', SUN)
             .replace('__PORTRAIT__', PORTRAIT))
 
 open('bloom-and-rise-home.html','w').write(HTML)
