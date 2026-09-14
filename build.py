@@ -29,7 +29,7 @@ HTML = r'''<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bloom &amp; Rise — Roshunda M. Hartison, MEd, LPC</title>
-<meta name="description" content="Creative, weight inclusive therapy for anxiety, OCD, body image, and self trust. Online sessions in Texas, Virginia, and Colorado.">
+<meta name="description" content="Creative therapy for anxiety, identity and self trust, body image, and depression. Online in Texas, Virginia, and Colorado, with in-person coming soon in Texas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
@@ -563,8 +563,8 @@ footer > .shell{position:relative;z-index:1}
       <div class="hero-copy">
         <h1>You've spent a long time being <span class="lit">the strong one.</span></h1>
         <p class="hero-lede">
-          Therapy for anxiety, OCD, body image, and trusting your own read on
-          things again. Online, with paint and paper never far from reach.
+          Therapy for anxiety, identity and self trust, body image, and
+          depression. Online, with paint and paper never far from reach.
         </p>
         <p class="hero-meta">
           <strong>Roshunda M. Hartison, MEd, LPC</strong>
@@ -601,8 +601,8 @@ footer > .shell{position:relative;z-index:1}
     <div class="meta-head">
       <h2 class="rise">Most of the work happens in the dark part.</h2>
       <p class="rise" data-d="1">
-        Change gets sold as a before and after photo. In practice the middle stretches out
-        much longer than anyone warns you, and it is where nearly all of the work gets done.
+        We tend to picture change as a before and an after. In real life there is a long
+        middle between the two, and that middle is where almost all of the actual work happens.
       </p>
     </div>
 
@@ -703,7 +703,7 @@ footer > .shell{position:relative;z-index:1}
       <article class="row rise" style="--tint:#9A4413">
         <span class="row-num">06</span>
         <h3>When anxiety is <i>running the show</i></h3>
-        <p>Including OCD and ERP work. We separate what is anxiety talking from what is actually you.</p>
+        <p>We separate what is anxiety talking from what is actually you. This is also where OCD and exposure work fit, when that is part of the picture.</p>
       </article>
     </div>
   </div>
@@ -717,8 +717,8 @@ footer > .shell{position:relative;z-index:1}
     <div>
       <h2 class="rise">Helping people find their way has been a thread throughout my life.</h2>
       <p class="rise" data-d="1">
-        I am Roshunda. Sixteen years in mental health and community work, most of it alongside
-        people the system tends to overlook. Community health, domestic violence and sexual
+        I am Roshunda. Sixteen years in mental health and community work, five and a half of
+        them as a licensed clinician, most of it alongside people the system tends to overlook. Community health, domestic violence and sexual
         assault services, intellectual and developmental disabilities, juvenile detention,
         Big Brothers Big Sisters, United Way. All of it taught me the same lesson. Meet people
         exactly where they are, and honor how much courage it takes to ask.
@@ -731,6 +731,7 @@ footer > .shell{position:relative;z-index:1}
       <p class="sig rise" data-d="2">Roshunda M. Hartison, MEd, LPC</p>
       <ul class="facts rise" data-d="3">
         <li><b>Licensed in</b><span>Texas, Virginia, and Colorado</span></li>
+        <li><b>Sessions</b><span>Online now. In-person visits in Texas coming soon.</span></li>
         <li><b>Education</b><span>MEd Clinical Counseling, University of Houston Victoria</span></li>
         <li><b>Also</b><span>Founder of Evolving Thru Art Inc.</span></li>
       </ul>

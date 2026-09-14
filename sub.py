@@ -85,8 +85,8 @@ not work on you. It means you have not had this treatment yet.</p>"""),
   ]),
 
  dict(f='body-image.html', wash='#F9E9F1', tint='#C77BA6', n='03',
-  nm='Body image, food, and weight inclusive care',
-  blurb='Weight inclusive work on body image, eating, and being in a body at all.',
+  nm='Body image and weight inclusive care',
+  blurb='Weight inclusive work on body image, self worth, and being in a body at all.',
   h1='Body image and <i>being in a body</i>',
   lede='Weight inclusive means the goal is not a smaller body. The goal is a life that is '
        'not organized around one.',
@@ -97,21 +97,26 @@ decades. Sometimes successfully, and then it came back, and the coming back felt
 of something about them. That is the part worth treating.</p>
 <p>This work is weight inclusive. That means Roshunda does not treat body size as a symptom
 to be corrected, does not set weight loss as a therapeutic goal, and does not use your body
-as evidence about your discipline, health, or worth. What gets treated is the distress,
-the preoccupation, and the rules.</p>"""),
+as evidence about your discipline, health, or worth. What gets treated is the distress and
+the preoccupation.</p>"""),
    ('What we work on', """
 <ul>
 <li>The running commentary, and how much of your attention it takes</li>
-<li>Food rules, and the rebound that follows breaking them</li>
+<li>The rules you have absorbed about eating, and the guilt that follows breaking them</li>
 <li>Avoiding photographs, mirrors, swimming, intimacy, medical care</li>
 <li>Comparison, and the specific way it spikes online</li>
 <li>Being on the receiving end of other people's comments, including from family and from doctors</li>
 <li>Grief, when you are letting go of a body you spent years trying to have</li>
 </ul>
-<p>For some people this overlaps with disordered eating. Roshunda will be direct with you
-about scope. If what you need is a treatment team with medical and nutritional support,
-she will say so and help you find it rather than working around the edge of something that
-needs more.</p>"""),
+<div class="callout">
+<p><b>Where this work stops.</b> Roshunda is a counselor, not a dietitian or a nutrition
+professional. She does not build meal plans, prescribe ways of eating, or advise on
+nutrition. What she treats is the distress: the shame, the preoccupation, the self worth
+questions, and the beliefs underneath them.</p>
+<p>When food or medical support is part of what you need, she works alongside dietitians
+and other providers and will help you find the right one. For disordered eating in
+particular, that team approach is not a fallback. It is the standard of care.</p>
+</div>"""),
    ('The identity part', """
 <p>Body image work is rarely only about the body. It usually turns out to be about being
 looked at, being judged, taking up space, and who taught you that you needed permission.
@@ -178,6 +183,57 @@ open to people in any state.</p>"""),
   ]),
 ]
 
+DEPRESSION = dict(f='depression.html', wash='#E9EEF3', tint='#4A6076',
+  nm='Depression and low motivation',
+  blurb='For the flat stretch, when everything takes more effort than it should.',
+  h1='Depression and <i>the flat stretch</i>',
+  lede='Depression is not only sadness. Often it is the slow narrowing of a life until '
+       'very little is left in it that you look forward to.',
+  body=[
+   ('What it actually looks like', """
+<p>People expect depression to feel like crying. Frequently it feels like nothing at all.
+The volume goes down on everything, good and bad alike. Getting up takes negotiation.
+Things you used to enjoy still look like things you should enjoy, and you feel guilty that
+they do not land.</p>
+<p>Some of what people bring here:</p>
+<ul>
+<li>Sleeping too much, or lying awake and dreading the morning</li>
+<li>Doing the bare minimum and calling yourself lazy for it</li>
+<li>Withdrawing from people, then feeling worse about being alone</li>
+<li>A running commentary about your own worth that you would never aim at anyone else</li>
+<li>Going through the motions competently while feeling absent from your own life</li>
+</ul>"""),
+   ('How Roshunda works with it', """
+<p>Two approaches carry most of this work.</p>
+<p><b>Cognitive behavioral therapy</b> takes the running commentary seriously as something
+to examine rather than obey. Depression makes very confident claims about you, your future,
+and what other people think. We slow those down and check them against the evidence.</p>
+<p><b>Behavioral activation</b> works from the other direction, and it is often the piece
+that moves first. Waiting to feel motivated before you act keeps you waiting, because with
+depression the motivation tends to arrive after the action rather than before it. So we
+start small and deliberately, rebuilding contact with the things that used to give your
+week its shape.</p>
+<p>It is structured work, and you will have things to try between sessions. Not homework
+for its own sake. Just the recognition that an hour a week is not where most of your life
+happens.</p>"""),
+   ('A word about scope', """
+<p>If medication is worth considering, Roshunda will say so and help you find a prescriber.
+She does not prescribe, and therapy and medication are not an either or.</p>
+<p>If you are having thoughts of harming yourself, please say so directly, early. It will
+not shock her and it will not end the work. If you are in danger right now, call or text
+<b>988</b>.</p>"""),
+  ])
+
+SERVICES.append(DEPRESSION)
+
+# Roshunda's preferred order of emphasis
+ORDER = ['anxiety.html', 'identity.html', 'body-image.html',
+         'depression.html', 'ocd.html', 'creative-therapy.html']
+SERVICES.sort(key=lambda d: ORDER.index(d['f']))
+for i, d in enumerate(SERVICES, 1):
+    d['n'] = '%02d' % i
+
+
 SVC_INDEX = ('<a class="svc rise" href="%(f)s" style="--tint:%(tint)s">'
              '<span class="n">%(n)s</span>'
              '<h3>%(nm)s</h3>'
@@ -210,8 +266,11 @@ FAQ = [
   <p>Workshops, classes, and creative programming are educational rather than clinical, so
   those are open to anyone anywhere. See <a href="workshops.html">workshops and groups</a>.</p>"""),
  ('Is everything online?',
-  """<p>Yes. All sessions are held over a secure video platform. You will get a link before
-  each appointment and you do not need to install anything unusual.</p>
+  """<p>For now, yes. All sessions are held over a secure video platform. You will get a link
+  before each appointment and you do not need to install anything unusual.</p>
+  <p><b>In-person visits in Texas are coming soon.</b> An office is in the works. If sitting
+  in the same room matters to you, mention it on the consult call and Roshunda will tell you
+  where that stands.</p>
   <p>You do need somewhere you can talk without managing who might hear you. A car in a
   parking lot counts. Plenty of good work has happened in a parked car.</p>"""),
  ('What does it cost?',
@@ -525,11 +584,15 @@ def build(HEAD, GREEN, SCRIPT, swap_nav, build_foot):
       <h2 class="rise">How sessions work.</h2>
       <div class="prose-body rise" data-d="1">
         <p>Sessions are 50 minutes, held over secure video, usually weekly to start. Roshunda
-        has been doing this work for over sixteen years, across community mental health,
-        shelters, juvenile detention, and IDD services before private practice, which is a
-        long way of saying very little will surprise her.</p>
+        has worked in mental health for sixteen years, five and a half of them as a licensed
+        clinician, across community mental health, shelters, juvenile detention, and IDD
+        services before private practice. Which is a long way of saying very little will
+        surprise her.</p>
         <p>She is warm and she is direct. You will get an actual opinion rather than a year
         of your own words handed back to you.</p>
+        <p><b>In-person visits in Texas are coming soon.</b> The practice is starting online
+        while an office is set up, so if you would rather sit in the same room, say so when
+        you reach out and Roshunda will let you know as soon as dates are set.</p>
         <p><b>Therapy is available only to clients physically located in Texas, Virginia, or
         Colorado at the time of session.</b> Workshops and creative programming are
         educational, are not therapy, and are open to anyone anywhere. See
