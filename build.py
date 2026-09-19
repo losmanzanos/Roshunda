@@ -18,6 +18,7 @@ HAND       = b64('hand.webp')
 # Scattered line butterflies, used as a faint paper texture
 FLIT       = b64('flit.webp')
 BOTANICAL  = b64('bot.webp')
+LOGO       = b64('logo-mark.webp')
 # Time of day triptych: dawn, midday, dusk
 SKY_1      = b64('tod-1.webp')
 SKY_2      = b64('tod-2.webp')
@@ -30,6 +31,7 @@ HTML = r'''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bloom &amp; Rise — Roshunda M. Hartison, MEd, LPC</title>
 <meta name="description" content="Creative therapy for anxiety, identity and self trust, body image, and depression. Online in Texas, Virginia, and Colorado, with in-person coming soon in Texas.">
+<link rel="icon" href="__LOGO__">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
@@ -98,6 +100,9 @@ img{display:block;max-width:100%}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:2rem}
 .wordmark{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 60,'WONK' 1;font-size:1.42rem;font-weight:500;letter-spacing:-.03em;text-decoration:none;display:flex;align-items:baseline;gap:.42rem;color:var(--bark)}
 .wordmark i{font-style:italic;color:var(--orange)}
+.wordmark span{display:flex;align-items:baseline;gap:.42rem}
+.logo{width:clamp(34px,3.4vw,42px);height:auto;flex:none;align-self:center}
+.nav.stuck .logo{width:clamp(30px,3vw,36px);transition:width .4s}
 .nav-r{display:flex;align-items:center;gap:clamp(1.15rem,1.9vw,2rem)}
 .nav-r a:not(.cta){text-decoration:none;font-size:.94rem;font-weight:500;color:var(--bark-2);position:relative;padding:.2rem 0}
 .nav-r a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--orange);transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.2,.7,.3,1)}
@@ -481,8 +486,9 @@ button.submit:disabled{opacity:.55;cursor:default}
   display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem;
   padding:clamp(1.1rem,3vw,2rem)}
 .sky-now{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 80,'WONK' 1;font-style:italic;
-  font-size:clamp(1.15rem,2.4vw,1.9rem);color:#FBF6EA;margin:0;max-width:22ch;
-  text-shadow:0 2px 22px rgba(30,20,14,.55)}
+  font-size:clamp(1.15rem,2.4vw,1.9rem);color:#FBF6EA;margin:0;max-width:none;
+  white-space:nowrap;text-shadow:0 2px 22px rgba(30,20,14,.55)}
+@media (max-width:520px){.sky-now{font-size:1.05rem}}
 .states{display:flex;gap:.4rem;flex-wrap:wrap}
 .states button{background:rgba(251,246,234,.14);border:1px solid rgba(251,246,234,.4);
   color:#FBF6EA;font:inherit;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;
@@ -539,7 +545,7 @@ footer > .shell{position:relative;z-index:1}
 
 <nav class="nav" id="nav">
   <div class="shell nav-in">
-    <a class="wordmark" href="#top">Bloom<i>&amp;</i>Rise</a>
+    <a class="wordmark" href="#top"><img class="logo" src="__LOGO__" alt="" width="40" height="39"><span>Bloom<i>&amp;</i>Rise</span></a>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="navr" aria-label="Menu"><i></i><i></i></button>
     <div class="nav-r" id="navr">
       <a href="#becoming">Becoming</a>
@@ -968,9 +974,9 @@ footer > .shell{position:relative;z-index:1}
     /* which panel of the triptych is true right now */
     function panel(h){ return (h>=5 && h<10) ? 1 : (h>=10 && h<17) ? 2 : 3 }
     var WORD = {
-      1:['First light where you are.',            'Early morning in %s.'],
-      2:['Full daylight where you are.',          'The middle of the day in %s.'],
-      3:['The last of the light where you are.',  'Evening in %s.']
+      1:['First light where you are.', 'First light in %s.'],
+      2:['Full sun where you are.',    'Full sun in %s.'],
+      3:['Last light where you are.',  'Last light in %s.']
     };
 
     var imgs = [null,document.getElementById('sky1'),document.getElementById('sky2'),document.getElementById('sky3')];
@@ -1045,6 +1051,7 @@ HTML = (HTML.replace('__HERO_ART__', HERO_ART)
             .replace('__HAND__', HAND)
             .replace('__FLIT__', FLIT)
             .replace('__BOTANICAL__', BOTANICAL)
+            .replace('__LOGO__', LOGO)
             .replace('__SKY_1__', SKY_1)
             .replace('__SKY_2__', SKY_2)
             .replace('__SKY_3__', SKY_3)
