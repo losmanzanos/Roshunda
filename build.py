@@ -18,7 +18,8 @@ HAND       = b64('hand.webp')
 # Scattered line butterflies, used as a faint paper texture
 FLIT       = b64('flit.webp')
 BOTANICAL  = b64('bot.webp')
-LOGO       = b64('logo-mark.webp')
+LOGO       = b64('logo-magnolia.webp')
+FAV        = b64('logo-fav.png','image/png')
 # Time of day triptych: dawn, midday, dusk
 SKY_1      = b64('tod-1.webp')
 SKY_2      = b64('tod-2.webp')
@@ -31,7 +32,7 @@ HTML = r'''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bloom &amp; Rise — Roshunda M. Hartison, MEd, LPC</title>
 <meta name="description" content="Creative therapy for anxiety, identity and self trust, body image, and depression. Online in Texas, Virginia, and Colorado, with in-person coming soon in Texas.">
-<link rel="icon" href="__LOGO__">
+<link rel="icon" href="__FAV__">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
@@ -101,8 +102,8 @@ img{display:block;max-width:100%}
 .wordmark{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 60,'WONK' 1;font-size:1.42rem;font-weight:500;letter-spacing:-.03em;text-decoration:none;display:flex;align-items:baseline;gap:.42rem;color:var(--bark)}
 .wordmark i{font-style:italic;color:var(--orange)}
 .wordmark span{display:flex;align-items:baseline;gap:.42rem}
-.logo{width:clamp(34px,3.4vw,42px);height:auto;flex:none;align-self:center}
-.nav.stuck .logo{width:clamp(30px,3vw,36px);transition:width .4s}
+.logo{height:clamp(54px,5.8vw,80px);width:auto;flex:none;display:block;transition:height .4s}
+.nav.stuck .logo{height:clamp(46px,4.4vw,58px)}
 .nav-r{display:flex;align-items:center;gap:clamp(1.15rem,1.9vw,2rem)}
 .nav-r a:not(.cta){text-decoration:none;font-size:.94rem;font-weight:500;color:var(--bark-2);position:relative;padding:.2rem 0}
 .nav-r a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--orange);transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.2,.7,.3,1)}
@@ -504,7 +505,7 @@ button.submit:disabled{opacity:.55;cursor:default}
 .greenhouse img{width:100%;height:clamp(200px,38vh,520px);object-fit:cover;object-position:50% 46%;display:block}
 .greenhouse::after{
   content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,var(--paper-2) 0%,rgba(245,238,221,0) 22%,rgba(245,238,221,0) 58%,color-mix(in oklab,var(--foot) 70%,transparent) 88%,var(--foot) 100%);
+  background:linear-gradient(180deg,var(--paper-2) 0%,rgba(245,238,221,0) 22%,rgba(245,238,221,0) 55%,rgba(247,240,227,.75) 84%,var(--paper) 100%);
   transition:background 1.2s ease;
 }
 .greenhouse-line{
@@ -513,21 +514,24 @@ button.submit:disabled{opacity:.55;cursor:default}
   font-size:clamp(1.2rem,2.6vw,2rem);color:#FBF6EA;text-shadow:0 2px 24px rgba(30,42,26,.6);
   margin:0;padding-inline:var(--gut);
 }
-footer{background:var(--foot);color:rgba(251,246,234,.8);padding:clamp(3.5rem,7vw,5.5rem) 0 3rem;font-size:.92rem;transition:background 1.2s ease;position:relative;overflow:hidden}
+footer{background:var(--paper);color:var(--bark-2);padding:clamp(1.5rem,4vw,3rem) 0 0;font-size:.92rem;transition:background 1.2s ease;position:relative;overflow:hidden}
 footer::before{content:"";position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(120% 80% at 50% 118%,color-mix(in oklab,var(--foot-2) 85%,transparent),transparent 70%);
   transition:background 1.2s ease}
 footer > .shell{position:relative;z-index:1}
-.foot-mark{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 60,'WONK' 1;font-size:clamp(2.8rem,10vw,7.5rem);line-height:.86;letter-spacing:-.045em;color:#FBF6EA;margin:0 0 2.5rem}
-.foot-mark i{font-style:italic;color:var(--orange-lit)}
-.foot-cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(251,246,234,.18)}
+footer::before{display:none}
+.foot-mark{margin:0 0 2.8rem}
+.foot-logo{display:block;height:clamp(96px,11vw,150px);width:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.foot-mark i{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:var(--orange-lit);font-size:1.05em}
+.foot-cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:0}
 @media (max-width:760px){.foot-cols{grid-template-columns:1fr}}
-.foot-cols h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sun);font-weight:600;margin:0 0 1rem}
+.foot-cols h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-deep);font-weight:600;margin:0 0 1rem}
 .foot-cols ul{list-style:none;padding:0;margin:0}
 .foot-cols li{margin-bottom:.6rem}
 .foot-cols a{text-decoration:none;transition:color .3s}
-.foot-cols a:hover{color:var(--sun)}
-.fine{padding-top:2.5rem;font-size:.81rem;line-height:1.72;color:rgba(251,246,234,.66);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem 3rem}
+.foot-cols a:hover{color:var(--orange-deep)}
+.fine{background:var(--foot);transition:background 1.2s ease;margin-inline:calc(50% - 50vw);padding:2.6rem max(var(--gut),calc((100vw - var(--maxw)) / 2)) 2.4rem;font-size:.81rem;line-height:1.72;color:rgba(251,246,234,.66);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem 3rem}
 .fine p{max-width:52ch;margin:0}
 .fine b{color:rgba(251,246,234,.78);font-weight:500}
 .fine a{color:rgba(251,246,234,.78)}
@@ -545,7 +549,7 @@ footer > .shell{position:relative;z-index:1}
 
 <nav class="nav" id="nav">
   <div class="shell nav-in">
-    <a class="wordmark" href="#top"><img class="logo" src="__LOGO__" alt="" width="40" height="39"><span>Bloom<i>&amp;</i>Rise</span></a>
+    <a class="wordmark" href="#top"><img class="logo" src="__LOGO__" alt="Bloom &amp; Rise Therapy" width="640" height="337"></a>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="navr" aria-label="Menu"><i></i><i></i></button>
     <div class="nav-r" id="navr">
       <a href="#becoming">Becoming</a>
@@ -886,7 +890,7 @@ footer > .shell{position:relative;z-index:1}
 
 <footer>
   <div class="shell">
-    <p class="foot-mark">Bloom<i>&amp;</i>Rise</p>
+    <p class="foot-mark"><img class="foot-logo" src="__LOGO__" alt="" width="640" height="337" loading="lazy"><span class="sr-only">Bloom &amp; Rise Therapy</span></p>
     <div class="foot-cols">
       <div>
         <h4>The practice</h4>
@@ -982,7 +986,15 @@ footer > .shell{position:relative;z-index:1}
     var imgs = [null,document.getElementById('sky1'),document.getElementById('sky2'),document.getElementById('sky3')];
     var now  = document.getElementById('skyNow');
     var wrap = document.getElementById('states');
-    if(!imgs[1] || !wrap) return;
+    function localHour(){var d=new Date();return d.getHours()+d.getMinutes()/60}
+    function paintFoot(h){var f=foot(h);
+      document.documentElement.style.setProperty('--foot',f[0]);
+      document.documentElement.style.setProperty('--foot-2',f[1])}
+    if(!imgs[1] || !wrap){
+      paintFoot(localHour());
+      setInterval(function(){paintFoot(localHour())},60000);
+      return;
+    }
 
     function hourIn(tz){
       var s = new Intl.DateTimeFormat('en-US',{timeZone:tz,hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
@@ -1051,6 +1063,7 @@ HTML = (HTML.replace('__HERO_ART__', HERO_ART)
             .replace('__HAND__', HAND)
             .replace('__FLIT__', FLIT)
             .replace('__BOTANICAL__', BOTANICAL)
+            .replace('__FAV__', FAV)
             .replace('__LOGO__', LOGO)
             .replace('__SKY_1__', SKY_1)
             .replace('__SKY_2__', SKY_2)
