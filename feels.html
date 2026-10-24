@@ -532,7 +532,7 @@ footer::before{display:none}
 .foot-mark i{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:var(--orange-lit);font-size:1.05em}
 .foot-cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:0}
 @media (max-width:760px){.foot-cols{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}.foot-cols > :first-child{grid-column:1 / -1}}
-@media (max-width:480px){.foot-cols{grid-template-columns:1fr}}
+@media (max-width:340px){.foot-cols{grid-template-columns:1fr}}
 .foot-cols h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-deep);font-weight:600;margin:0 0 1rem}
 .foot-cols ul{list-style:none;padding:0;margin:0}
 .foot-cols li{margin-bottom:.6rem}
@@ -544,6 +544,32 @@ footer::before{display:none}
 .fine a{color:rgba(251,246,234,.78)}
 .fine .full{grid-column:1/-1;padding-top:1rem;border-top:1px solid rgba(251,246,234,.14)}
 
+/* ---------------- phone polish ---------------- */
+@media (max-width:600px){
+  /* taller hero art so the butterfly reads */
+  .hero-plate{max-height:none}
+  .hero-plate img{height:min(68vw,50vh)}
+  /* tighter rhythm between sections */
+  .intro{padding:3.25rem 0 3.5rem}
+  .work,.about,.shops{padding:3.5rem 0}
+  .contact{padding:3.5rem 0 3rem}
+  .meta{padding-top:calc(1.5rem + min(66vw,446px));padding-bottom:3.5rem}
+  .ink{width:92vw;opacity:.8}
+  .meta-head{margin-bottom:2rem}
+  /* stages stack: full-width art, text underneath */
+  .stages{gap:2.2rem}
+  .stage{display:block}
+  .stage .plate{aspect-ratio:4/3}
+  .stage .plate img{object-position:50% 38%}
+  .stage figcaption{padding-top:1rem}
+  .stage p{font-size:1rem;max-width:none}
+  /* footer: shorter and denser */
+  .greenhouse img{height:46vw}
+  .foot-mark{margin:0 0 1.6rem}
+  .foot-logo{height:84px}
+  .foot-cols{grid-template-columns:1fr 1fr;gap:1.8rem 1.25rem;padding-bottom:2.2rem}
+  .foot-cols > :first-child{grid-column:1 / -1}
+}
 
 /* inner pages clear the fixed nav */
 .page-top{padding-top:clamp(6.5rem,10vw,9rem)}
@@ -656,7 +682,7 @@ footer::before{display:none}
     </div>
     <aside class="details rise" data-d="1">
       <dl>
-        <dt>Sessions</dt><dd>Online only. Individuals, families, and groups. Teens through elders.</dd>
+        <dt>Sessions</dt><dd>Virtual in Texas, Virginia, and Colorado. In person in Katy, Texas. Individuals, families, and groups. Teens through elders.</dd>
         <dt>Licensed in</dt><dd>Texas, license 86566. Virginia, license 86566. Colorado, license LPC.0021147.</dd>
         <dt>Investment</dt><dd>$175 individual, $200 couples. A limited sliding scale is available, please ask.</dd>
         <dt>Insurance</dt><dd>Aetna, Anthem, BlueCross BlueShield, Cigna and Evernorth, UnitedHealthcare and Optum, select EAPs, and out of network.</dd>
@@ -750,8 +776,9 @@ footer::before{display:none}
     var tick=false;
     function draw(){
       var r = meta.getBoundingClientRect();
-      var t = (innerHeight - r.top) / (innerHeight + r.height);
-      t = Math.max(0, Math.min(1, (t - .10) / .42));
+      var t;
+      if(innerWidth <= 900){ t = Math.max(0, Math.min(1, (innerHeight - r.top) / (innerHeight * .7))); }
+      else { t = (innerHeight - r.top) / (innerHeight + r.height); t = Math.max(0, Math.min(1, (t - .10) / .42)); }
       ink.style.clipPath = 'inset(0 ' + ((1 - t) * 100).toFixed(2) + '% 0 0)';
       tick=false;
     }
