@@ -31,8 +31,9 @@ HTML = r'''<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bloom &amp; Rise — Roshunda M. Hartison, MEd, LPC</title>
-<meta name="description" content="Creative therapy for anxiety, identity and self trust, body image, and depression. Online in Texas, Virginia, and Colorado, with in-person coming soon in Texas.">
+<meta name="description" content="Therapy for anxiety, identity and self-trust, body image, and depression. Virtual sessions in Texas, Virginia, and Colorado, and in person in Katy, Texas.">
 <link rel="icon" href="__FAV__">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
@@ -573,12 +574,13 @@ footer::before{display:none}
       <div class="hero-copy">
         <h1>You've spent a long time being <span class="lit">the strong one.</span></h1>
         <p class="hero-lede">
-          Therapy for anxiety, identity and self trust, body image, and
-          depression. Online, with paint and paper never far from reach.
+          Therapy for anxiety, identity and self-trust, body image, and
+          depression. Thoughtful, collaborative care with room for creativity
+          along the way.
         </p>
         <p class="hero-meta">
           <strong>Roshunda M. Hartison, MEd, LPC</strong>
-          <span>Online sessions for Texas, Virginia, and Colorado</span>
+          <span>Virtual in Texas, Virginia, and Colorado. In person in Katy, Texas.</span>
         </p>
       </div>
     </div>
@@ -741,7 +743,7 @@ footer::before{display:none}
       <p class="sig rise" data-d="2">Roshunda M. Hartison, MEd, LPC</p>
       <ul class="facts rise" data-d="3">
         <li><b>Licensed in</b><span>Texas, Virginia, and Colorado</span></li>
-        <li><b>Sessions</b><span>Online now. In-person visits in Texas coming soon.</span></li>
+        <li><b>Sessions</b><span>Virtual in Texas, Virginia, and Colorado. In person in Katy, Texas.</span></li>
         <li><b>Education</b><span>MEd Clinical Counseling, University of Houston Victoria</span></li>
         <li><b>Also</b><span>Founder of Evolving Thru Art Inc.</span></li>
       </ul>
@@ -770,9 +772,11 @@ footer::before{display:none}
         <span class="tag open">Open to every state</span>
       </article>
       <article class="shop rise" data-d="2">
-        <h3>OCD support group</h3>
-        <p>A small ongoing group for people doing ERP work. The part where you find out you are not the only one.</p>
-        <span class="tag lic">Texas, Virginia, Colorado</span>
+        <h3>Chew &amp; Chat</h3>
+        <p>Conversations, connection, and creativity. A welcoming space for women to talk through
+        meaningful life topics, make something with their hands, and leave with tools they can
+        actually use. Guided discussion, a hands on activity, and good company.</p>
+        <span class="tag open">Open to every state</span>
       </article>
     </div>
 
@@ -803,8 +807,8 @@ footer::before{display:none}
           <label>I would be interested in</label>
           <div class="opts">
             <label><input type="checkbox" name="interest" value="creative"> Creative workshops</label>
-            <label><input type="checkbox" name="interest" value="body"> Body image and food</label>
-            <label><input type="checkbox" name="interest" value="ocd"> OCD support group</label>
+            <label><input type="checkbox" name="interest" value="body"> Body image and self worth</label>
+            <label><input type="checkbox" name="interest" value="chewchat"> Chew &amp; Chat</label>
             <label><input type="checkbox" name="interest" value="other"> Something else</label>
           </div>
         </div>
@@ -867,7 +871,7 @@ footer::before{display:none}
     <aside class="details rise" data-d="1">
       <dl>
         <dt>Sessions</dt><dd>Online only. Individuals, families, and groups. Teens through elders.</dd>
-        <dt>Licensed in</dt><dd>Texas, license 86566. Virginia. Colorado.</dd>
+        <dt>Licensed in</dt><dd>Texas, license 86566. Virginia, license 86566. Colorado, license LPC.0021147.</dd>
         <dt>Investment</dt><dd>$175 individual, $200 couples. A limited sliding scale is available, please ask.</dd>
         <dt>Insurance</dt><dd>Aetna, Anthem, BlueCross BlueShield, Cigna and Evernorth, UnitedHealthcare and Optum, select EAPs, and out of network.</dd>
         <dt>Phone</dt><dd><a href="tel:+13465509348">(346) 550 9348</a></dd>
@@ -915,7 +919,7 @@ footer::before{display:none}
       </div>
     </div>
     <div class="fine">
-      <p><b>Scope of practice.</b> Roshunda M. Hartison is a Licensed Professional Counselor in Texas (license 86566), Virginia, and Colorado. Therapy services are available only to clients physically located in one of those states at the time of session. Workshops, classes, and creative programming are educational, are open to participants anywhere, and do not constitute therapy, a therapeutic relationship, or medical advice.</p>
+      <p><b>Scope of practice.</b> Roshunda M. Hartison is a Licensed Professional Counselor in Texas (license 86566), Virginia (license 86566), and Colorado (license LPC.0021147). Therapy services are available only to clients physically located in one of those states at the time of session. Workshops, classes, and creative programming are educational, are open to participants anywhere, and do not constitute therapy, a therapeutic relationship, or medical advice.</p>
       <p><b>Not an emergency service.</b> This website and its forms are not monitored continuously and are not appropriate for urgent or crisis needs. If you are in danger or thinking about harming yourself, call or text 988, or call 911.</p>
       <p>Information submitted through this site is not encrypted and is not a HIPAA secure channel. Please do not send protected health information. Content here is general information only and is not a substitute for individualized clinical care.</p>
       <p class="full">&copy; <span id="yr">2026</span> Bloom &amp; Rise. <a href="#">Privacy</a> &middot; <a href="#">Good Faith Estimate</a> &middot; <a href="#">Accessibility</a></p>
@@ -927,6 +931,19 @@ footer::before{display:none}
 <script>
 (function(){
   'use strict';
+
+  /* ------------------------------------------------------------------
+     FORM SETTINGS  —  fill these three in, then the forms are live.
+     EmailJS dashboard: Account > General (public key),
+     Email Services (service id), Email Templates (template id).
+     The destination inbox is set on the TEMPLATE in EmailJS,
+     not here, so you can retarget it without touching the site.
+  ------------------------------------------------------------------ */
+  var EMAILJS_PUBLIC_KEY = 'EMAILJS_PUBLIC_KEY';
+  var EMAILJS_SERVICE_ID = 'EMAILJS_SERVICE_ID';
+  var EMAILJS_TEMPLATE_ID = 'EMAILJS_TEMPLATE_ID';
+  var KIT_FORM_ID = 'KIT_FORM_ID';          /* numeric id from the Kit form URL */
+
   document.getElementById('yr').textContent = new Date().getFullYear();
 
   var nav=document.getElementById('nav'), burger=document.getElementById('burger'), navr=document.getElementById('navr');
@@ -1036,19 +1053,75 @@ footer::before{display:none}
     setInterval(refresh, 30000);
   })();
 
-  function wire(fid,sid,msg){
-    var f=document.getElementById(fid), s=document.getElementById(sid);
-    if(!f||!s) return;
+  function ready(f,s){
+    if(!f||!s) return false;
+    if(f.querySelector('[name=\"website\"]').value) return false;   /* honeypot */
+    if(!f.checkValidity()){f.reportValidity();return false}
+    return true;
+  }
+  function say(s,msg){ s.textContent = msg; s.classList.add('on'); }
+  function configured(v){ return v && v.indexOf('EMAILJS_') !== 0 && v.indexOf('KIT_') !== 0; }
+
+  /* ---- consult request goes straight to the practice inbox ---- */
+  (function(){
+    var f = document.getElementById('contactForm');
+    var s = document.getElementById('contactStatus');
+    if(!f || !s) return;
+    var btn = f.querySelector('button.submit');
+    if(configured(EMAILJS_PUBLIC_KEY) && window.emailjs){ emailjs.init({publicKey:EMAILJS_PUBLIC_KEY}) }
     f.addEventListener('submit',function(e){
       e.preventDefault();
-      if(f.querySelector('[name="website"]').value) return;
-      if(!f.checkValidity()){f.reportValidity();return}
-      s.textContent=msg; s.classList.add('on');
-      f.querySelector('button.submit').disabled=true;
+      if(!ready(f,s)) return;
+      if(!configured(EMAILJS_PUBLIC_KEY) || !window.emailjs){
+        say(s,'This form is not connected yet, so nothing was sent. Please email hello@bloomandrisetherapy.com in the meantime.');
+        return;
+      }
+      btn.disabled = true; say(s,'Sending.');
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, f)
+        .then(function(){
+          say(s,'Thank you. Your message is on its way to Roshunda, and she will reply within two business days. If it is urgent, please call or text 988.');
+          f.reset();
+        })
+        .catch(function(){
+          btn.disabled = false;
+          say(s,'Something went wrong sending that. Please email hello@bloomandrisetherapy.com directly and it will reach her.');
+        });
     });
-  }
-  wire('contactForm','contactStatus','Received. This is a mockup, so nothing was actually sent. On the live site this would reach Roshunda and she would reply within two business days.');
-  wire('interestForm','interestStatus','Noted. Mockup only, nothing sent. On the live site you would be first to hear when dates are set.');
+  })();
+
+  /* ---- workshop interest list goes to Kit ---- */
+  (function(){
+    var f = document.getElementById('interestForm');
+    var s = document.getElementById('interestStatus');
+    if(!f || !s) return;
+    var btn = f.querySelector('button.submit');
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      if(!ready(f,s)) return;
+      if(!configured(KIT_FORM_ID)){
+        say(s,'The signup list is not connected yet, so nothing was sent.');
+        return;
+      }
+      btn.disabled = true; say(s,'Adding you.');
+      var d = new FormData(f);
+      var picks = d.getAll('interest').join(', ');
+      var body = new FormData();
+      body.append('email_address', d.get('email') || '');
+      body.append('fields[first_name]', d.get('name') || '');
+      if(picks) body.append('fields[interests]', picks);
+      if(d.get('state')) body.append('fields[state]', d.get('state'));
+      fetch('https://app.kit.com/forms/'+KIT_FORM_ID+'/subscriptions',
+            {method:'POST', body:body, headers:{'Accept':'application/json'}})
+        .then(function(r){ if(!r.ok) throw 0;
+          say(s,'You are on the list. You will hear from Roshunda as soon as dates are set.');
+          f.reset();
+        })
+        .catch(function(){
+          btn.disabled = false;
+          say(s,'That did not go through. Please email hello@bloomandrisetherapy.com and you will be added by hand.');
+        });
+    });
+  })();
 })();
 </script>
 </body>

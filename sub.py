@@ -9,219 +9,329 @@ UPDATED = 'Last updated <span class="todo">[DATE]</span>'
 SERVICES = [
  dict(f='anxiety.html', wash='#FBEDE0', tint='#B4551C', n='01',
   nm='Anxiety and overwhelm',
-  blurb='For when your baseline is bracing, and rest feels like something you have to earn.',
+  blurb='For when your mind rarely slows down, even while you keep everything moving.',
   h1='Anxiety and <i>overwhelm</i>',
   lede='You are functional. You are also exhausted. Anxiety that looks like competence from '
        'the outside is still anxiety, and it still costs you something every day.',
   body=[
    ('What this looks like', """
-<p>Most people who come to Roshunda for anxiety are not falling apart in any way other
-people can see. They are the ones who answer the message, cover the shift, remember the
-birthday. The anxiety shows up underneath that: the replaying of a conversation for three
-days, the tightness that arrives before the alarm does, the sense that if you stopped
-managing everything for a week it would all come down.</p>
-<p>Some of what people bring here:</p>
+<p>Sometimes anxiety does not look the way people expect. You may be the person everyone depends
+on. The one who answers the message, remembers the birthday, shows up for everyone else, and
+somehow keeps everything moving. Underneath all of that, your mind rarely slows down.</p>
+<p>It is replaying a conversation days after it happened. Waking up with tension in your body
+before the day has started. Feeling like if you stopped managing everything, even for a moment,
+something might fall apart.</p>
+<p>Or maybe anxiety has made it harder to keep up. You are avoiding things you once handled with
+ease, struggling to concentrate, withdrawing from people, or feeling flattened by ordinary
+responsibilities. Whether you are holding it together on the outside or struggling to get through
+the day, your anxiety deserves attention and care.</p>
+<p>Some of what you may be experiencing:</p>
 <ul>
-<li>Waking up already behind, or already braced</li>
-<li>Overthinking a decision so thoroughly that you never make it</li>
-<li>Physical symptoms with no medical cause, or a medical cause that has been ruled out twice</li>
-<li>Saying yes and then resenting it, then feeling guilty about the resentment</li>
-<li>Rest that does not restore anything, because you spend it worrying about what you are not doing</li>
+<li>Waking up already behind, or mentally preparing for everything that could go wrong</li>
+<li>Overthinking decisions to the point that making one feels impossible</li>
+<li>Physical tension, racing thoughts, or symptoms that intensify when you are anxious</li>
+<li>Saying yes when you want to say no, then feeling guilty or resentful afterward</li>
+<li>Avoiding situations, responsibilities, or conversations because they feel like too much</li>
+<li>Struggling to rest because your mind keeps listing what you have not done</li>
 </ul>"""),
    ('How the work goes', """
-<p>Early on, the work is mostly about accuracy. Anxiety is very good at presenting a
-guess as a fact, and a lot of the first few sessions is separating what actually happened
-from what your nervous system concluded about it.</p>
-<p>From there it gets practical. We look at the specific situations that spike you, what
-you do to bring the spike down, and whether those strategies are helping or quietly making
-the next spike bigger. Avoidance is usually the honest answer, and it is usually not a
-character flaw. It worked once. It is just expensive now.</p>
-<p>Roshunda works from a cognitive behavioral base with exposure and response prevention
-where it fits, plus mindfulness and somatic work when talking about it is not getting there.
-If you are someone who thinks in images or sound rather than sentences, the art and music
-side of her practice is available too, and it is not a consolation prize.</p>"""),
+<p>We start by getting to know you. Your experiences, what anxiety looks like in your everyday
+life, and how you have been managing it. There is no expectation that you have anything figured
+out before you arrive.</p>
+<p>Together we begin to recognize patterns. The thoughts that keep you stuck, the situations that
+bring anxiety up, and the ways you have learned to cope. Some of those strategies helped you get
+through difficult moments. They may not be helping you now.</p>
+<p>From there we get practical. We explore ways to challenge unhelpful thinking, respond
+differently to anxiety, set healthier boundaries, and gradually face what you have been avoiding.
+The goal is not to push you before you are ready. It is to build your confidence in handling
+discomfort and uncertainty.</p>
+<p>Roshunda's approach draws from cognitive behavioral therapy, acceptance and commitment therapy,
+mindfulness, and exposure based strategies where they fit. And because not everyone processes
+their experiences through conversation alone, there is room for creative expression, music, or
+other ways of connecting with what you are feeling.</p>
+<p>Therapy is collaborative. You will work out together what helps, and she will encourage you to
+practice it outside of session so it becomes part of your life rather than part of the hour.</p>"""),
    ('What changes', """
-<p>Realistically: the anxiety does not vanish. What changes is how much of your day it gets
-to run. People finish this work able to notice the alarm going off without treating it as
-information, make a decision without needing certainty first, and stop paying the tax of
-constant preemptive management.</p>"""),
+<p>The goal is not necessarily to eliminate anxiety. It is to feel less controlled by it.</p>
+<p>You may begin to notice anxious thoughts without automatically believing them, make decisions
+without needing to feel completely certain, and recognize when you are carrying more than you have
+the capacity to hold.</p>
+<p>Some days will still be hard. Over time you can build the confidence, flexibility, and tools to
+meet those days differently. You do not have to wait until everything falls apart to start making
+space for yourself.</p>"""),
   ]),
 
- dict(f='ocd.html', wash='#FCF0E2', tint='#D9762F', n='02',
-  nm='OCD and intrusive thoughts',
-  blurb='Evidence based OCD treatment, including exposure and response prevention.',
-  h1='OCD and <i>intrusive thoughts</i>',
-  lede='The thought is not the problem. The deal you have made with the thought is the '
-       'problem, and that deal is treatable.',
-  body=[
-   ('What OCD actually is', """
-<p>OCD is badly served by the way it gets talked about. It is not tidiness and it is not a
-personality trait. It is a loop: an intrusive thought, image, or urge arrives, it lands as
-unbearable, and you do something to make the feeling stop. The thing you do works, briefly.
-Doing it teaches your brain that the thought was in fact dangerous, so the thought comes
-back louder. That is the whole mechanism.</p>
-<p>The compulsion is not always visible. A lot of OCD is entirely internal: mental review,
-silent reassurance, counting, praying to undo, checking your own body for a feeling.
-Roshunda works with all of it, including the themes people are most afraid to say out loud.
-Harm, contamination, relationships, religion and morality, sexuality, health. She has heard
-them. She will not be alarmed.</p>"""),
-   ('Exposure and response prevention', """
-<p>ERP is the treatment with the strongest evidence behind it, and it is the core of this
-work. In plain terms: you deliberately move toward the thing that triggers the thought, and
-you do not perform the compulsion afterward. Your brain gets to learn, from experience
-rather than from argument, that the feeling passes on its own.</p>
-<p>It is uncomfortable and it is collaborative. You are not ambushed. You and Roshunda build
-the ladder together, you decide the pace, and you start somewhere you can actually do. She
-has treated OCD both in private practice and through NOCD, so this is routine work for her
-rather than an occasional case.</p>
-<p><b>One thing worth saying plainly.</b> If you have been told your thoughts mean something
-about who you are, that was wrong. People with OCD are, as a group, notable for how much
-they do not want to do the thing they are afraid of. That is why it sticks.</p>"""),
-   ('If you have tried therapy before', """
-<p>A lot of people with OCD have already done a round of talk therapy that made things
-slightly worse, usually because a well meaning therapist offered reassurance, which is the
-compulsion in a nicer outfit. If that was your experience, it does not mean treatment does
-not work on you. It means you have not had this treatment yet.</p>"""),
-  ]),
-
- dict(f='body-image.html', wash='#F9E9F1', tint='#C77BA6', n='03',
-  nm='Body image and weight inclusive care',
-  blurb='Weight inclusive work on body image, self worth, and being in a body at all.',
-  h1='Body image and <i>being in a body</i>',
-  lede='Weight inclusive means the goal is not a smaller body. The goal is a life that is '
-       'not organized around one.',
-  body=[
-   ('Where this starts', """
-<p>Most people arrive having already tried to fix this by changing the body. Sometimes for
-decades. Sometimes successfully, and then it came back, and the coming back felt like proof
-of something about them. That is the part worth treating.</p>
-<p>This work is weight inclusive. That means Roshunda does not treat body size as a symptom
-to be corrected, does not set weight loss as a therapeutic goal, and does not use your body
-as evidence about your discipline, health, or worth. What gets treated is the distress and
-the preoccupation.</p>"""),
-   ('What we work on', """
-<ul>
-<li>The running commentary, and how much of your attention it takes</li>
-<li>The rules you have absorbed about eating, and the guilt that follows breaking them</li>
-<li>Avoiding photographs, mirrors, swimming, intimacy, medical care</li>
-<li>Comparison, and the specific way it spikes online</li>
-<li>Being on the receiving end of other people's comments, including from family and from doctors</li>
-<li>Grief, when you are letting go of a body you spent years trying to have</li>
-</ul>
-<div class="callout">
-<p><b>Where this work stops.</b> Roshunda is a counselor, not a dietitian or a nutrition
-professional. She does not build meal plans, prescribe ways of eating, or advise on
-nutrition. What she treats is the distress: the shame, the preoccupation, the self worth
-questions, and the beliefs underneath them.</p>
-<p>When food or medical support is part of what you need, she works alongside dietitians
-and other providers and will help you find the right one. For disordered eating in
-particular, that team approach is not a fallback. It is the standard of care.</p>
-</div>"""),
-   ('The identity part', """
-<p>Body image work is rarely only about the body. It usually turns out to be about being
-looked at, being judged, taking up space, and who taught you that you needed permission.
-That is where this work tends to go, and it is the part that holds after the noise settles.</p>"""),
-  ]),
-
- dict(f='identity.html', wash='#F1E7EC', tint='#5F2A46', n='04',
-  nm='Identity, self trust, and life transitions',
-  blurb='For the stretch between who you were and who you are turning into.',
-  h1='Identity and <i>self trust</i>',
+ dict(f='identity.html', wash='#F1E7EC', tint='#5F2A46', n='02',
+  nm='Identity and self-trust',
+  blurb='For the stretch between who you were and who you are becoming.',
+  h1='Identity and <i>self-trust</i>',
   lede='You can be doing everything right and still not recognize the life you built. '
        'That is not ingratitude. That is information.',
   body=[
-   ('The middle stretch', """
-<p>Some people come in with a symptom. Others come in with a question, and the question is
-usually some version of: who am I when I stop being useful to everyone.</p>
-<p>This shows up around real events, and the events are often ones you are supposed to be
-happy about. A promotion. A move. A wedding. A degree. The kids getting old enough not to
-need you the same way. It also shows up with no event at all, which is more disorienting,
-because there is nothing to point at.</p>"""),
-   ('Self trust specifically', """
-<p>A great many people can list what everyone else in their life wants and cannot answer
-what they want. If you learned early that reading the room kept you safe, or kept someone
-else calm, you got very good at a skill that is now running without your permission.</p>
-<p>The work here is slow and it is worth it. We look at where your read on things got
-overridden, how you learned to check with other people before you check with yourself, and
-what it takes to rebuild a working relationship with your own judgment. Roshunda is direct
-in this work. She will not simply mirror you back at yourself for a year.</p>"""),
-   ('Who this tends to be for', """
-<p>Roshunda works often with Black women, with first generation professionals, with
-caregivers, and with people who have been the reliable one in a family system since they
-were young. Not exclusively. But if you have been carrying something for a long time and
-have never been asked what it costs, this is that conversation.</p>"""),
+   ('When life starts to feel different', """
+<p>Sometimes you come to therapy because something is wrong. Other times it is because something
+no longer feels right, even if you cannot quite explain why.</p>
+<p>Maybe you have spent so much time meeting expectations, taking care of others, or following the
+path you thought you were supposed to take that you have lost touch with what you actually want.</p>
+<p>Or maybe you are entering a new season. A career change, graduation, a relationship shift,
+becoming a parent, an unexpected loss, or simply realizing that the version of yourself you have
+always known is changing. And sometimes there is no event at all. Just a growing sense that
+something needs to shift.</p>
+<p>You do not have to have the answers to begin exploring who you are and who you are becoming.</p>"""),
+   ('Rebuilding trust in yourself', """
+<p>When you have spent years weighing everyone else's needs, opinions, and expectations, it can
+become difficult to recognize your own voice.</p>
+<p>You may second guess your decisions, look to others for reassurance, struggle to set
+boundaries, or feel guilty when you choose something for yourself. Sometimes those patterns
+developed because they helped you navigate relationships, responsibilities, or hard experiences.
+What once helped you get through may no longer be helping you grow.</p>
+<p>In this work you will explore where those patterns began, how they show up today, and what it
+looks like to make decisions that reflect your own values. Roshunda offers a space where you are
+heard and understood, and she will also ask questions, challenge patterns when it is useful, and
+encourage you to try something different.</p>
+<p>The goal is not to become someone new. It is to build a stronger relationship with yourself
+and make room for the person you are becoming.</p>"""),
+   ('Who this tends to resonate with', """
+<p>This work may feel familiar if you have spent much of your life being the dependable one,
+navigating family or cultural expectations, or trying to meet standards that leave little room for
+your own needs.</p>
+<p>It may also resonate if you are navigating:</p>
+<ul>
+<li>Transitions that have you questioning your direction or sense of purpose</li>
+<li>People pleasing, perfectionism, or difficulty setting boundaries</li>
+<li>Self doubt and constantly seeking reassurance</li>
+<li>Changes in relationships, family roles, career, or personal identity</li>
+<li>The pressure to be strong, successful, or to have everything figured out</li>
+<li>A wish to reconnect with your values, interests, and sense of self</li>
+</ul>
+<p><b>You are allowed to grow beyond the version of yourself that everyone else has gotten used
+to.</b></p>"""),
   ]),
 
- dict(f='creative-therapy.html', wash='#EAF0E2', tint='#5E7A4F', n='05',
-  nm='Creative and expressive work',
-  blurb='Art, color, and sound in session, for the weeks when words are not getting there.',
-  h1='When words <i>run out</i>',
-  lede='Roshunda is a working artist and musician. That is not a hobby she mentions in her '
-       'bio. It is a tool she uses in the room.',
+ dict(f='body-image.html', wash='#F9E9F1', tint='#C77BA6', n='03',
+  nm='Body image and self-worth',
+  blurb='Weight inclusive work on body image, self worth, and being in a body at all.',
+  h1='Body image and <i>self-worth</i>',
+  lede='Your body is not a problem to solve. And your worth has never been determined by its '
+       'size, shape, or appearance.',
   body=[
-   ('Why this exists', """
-<p>There is a certain kind of week where talking about it does not do anything. You can
-describe the situation accurately, in order, with insight, and leave the session exactly as
-you came in. Sometimes the material is preverbal. Sometimes you have told the story so many
-times that the words have worn smooth and stopped carrying anything.</p>
-<p>For those weeks there is another way in. Color, mark making, sound, movement on paper.
-You do not need to be able to draw. Nobody is assessing the work. The point is that making
-something gets at material that explaining it does not.</p>"""),
-   ('What it looks like in practice', """
-<p>This is not a separate service you book instead of therapy. It is a mode inside the
-therapy, available when it is useful, and it is always your call. Some clients never use
-it. Some use it for one session in a hard month. Some find it is the only thing that moves
-anything and build most of their work around it.</p>
-<p>Everything happens over video, so materials are whatever you have. Printer paper and a
-pen is enough. Roshunda will tell you if something else would help.</p>"""),
-   ('The wider work', """
-<p>Roshunda also runs <a href="https://www.evolvingthruart.com/" target="_blank" rel="noopener">Evolving Thru Art</a>,
-which brings creative programming to communities outside a therapy office entirely. If you
-are looking for that rather than for individual therapy, the
-<a href="workshops.html">workshops and groups</a> page is the better door, and those are
-open to people in any state.</p>"""),
+   ('Where this starts', """
+<p>Your relationship with your body is shaped by far more than what you see in the mirror.</p>
+<p>Maybe you have spent years trying to change how your body looks, hoping that reaching a certain
+size or number would finally let you feel comfortable in your own skin. Maybe you have experienced
+criticism, comparison, or unwanted comments about your appearance. Or perhaps changes from aging,
+health, pregnancy, or other experiences have left you feeling disconnected from yourself.</p>
+<p>Sometimes the struggle is not about wanting to change your body at all. It is about wanting to
+stop feeling uncomfortable, ashamed, or constantly aware of how others might see you.</p>
+<p>Whatever brought you here, you deserve a space where your body is not judged and your
+experiences are taken seriously.</p>"""),
+   ('What we work on', """
+<ul>
+<li>The constant self criticism or negative thoughts about your body</li>
+<li>Comparing your appearance to others, especially online</li>
+<li>Feeling uncomfortable in photographs, mirrors, clothing, or social situations</li>
+<li>Avoiding activities, relationships, or experiences because of how you feel about your body</li>
+<li>Shame, guilt, or rigid beliefs connected to food and appearance</li>
+<li>Unwanted comments or judgment from family, partners, or healthcare providers</li>
+<li>Adjusting to body changes, and grieving expectations you once held</li>
+<li>Building self compassion and a sense of worth that does not depend on how you look</li>
+</ul>"""),
+   ('A weight-inclusive approach', """
+<p>Roshunda approaches body image from a weight inclusive perspective. That means she does not
+view body size as a problem that needs correcting, and weight loss is not a goal of the work.</p>
+<p>Instead you will look at how your thoughts, beliefs, experiences, and emotions shape your
+relationship with your body and with yourself. You will not be asked to earn self acceptance by
+changing your appearance.</p>
+<p>Her role is to help you explore the patterns keeping you stuck, challenge the harmful messages
+you have taken in, and begin building a relationship with yourself rooted in respect rather than
+criticism.</p>
+<div class="callout">
+<p><b>When additional support is needed.</b> As a Licensed Professional Counselor, Roshunda's work
+focuses on the emotional and psychological side of body image and self worth. She does not provide
+nutritional counseling, prescribe diets, or develop meal plans.</p>
+<p>If concerns about eating, nutrition, or physical health need more, you can talk through
+connecting with qualified professionals, including registered dietitians and clinicians who
+specialize in eating disorders. A collaborative approach helps make sure you are cared for as a
+whole person.</p>
+</div>"""),
+   ('Beyond the mirror', """
+<p>Body image work often opens the door to deeper conversations about identity, relationships,
+belonging, and the messages you have received about what makes someone worthy.</p>
+<p>It is about what it means to take up space without apologizing, to participate in life without
+waiting for your body to change, and to treat yourself with the compassion you offer other people
+so freely.</p>
+<p><b>You deserve to live fully in the body you have today, not just the one you imagine having
+someday.</b></p>"""),
+  ]),
+
+ dict(f='ocd.html', wash='#FCF0E2', tint='#D9762F', n='05',
+  nm='OCD and intrusive thoughts',
+  blurb='Evidence based OCD treatment, including exposure and response prevention.',
+  h1='OCD and <i>intrusive thoughts</i>',
+  lede='You do not have to believe every thought your mind produces. And you do not have to keep '
+       'organizing your life around trying to make those thoughts go away.',
+  body=[
+   ('Understanding OCD', """
+<p>OCD is about much more than cleanliness, organization, or wanting things a certain way.</p>
+<p>It often involves unwanted thoughts, images, urges, or feelings that create distress, doubt, or
+uncertainty. In response, you do something to feel better, to prevent something bad, or to get a
+sense of certainty. That response brings relief briefly. Over time the cycle becomes exhausting.</p>
+<p>Not all compulsions are visible. Sometimes OCD looks like checking locks, washing hands, or
+avoiding certain situations. Other times it happens entirely in your mind: replaying
+conversations, analyzing your intentions, seeking reassurance, mentally reviewing memories, or
+repeating certain words or prayers to feel safe.</p>
+<p>OCD also tends to attach itself to what you care about most. Your relationships, your faith,
+your health, your identity, the people you love.</p>
+<p>Some common experiences:</p>
+<ul>
+<li>Unwanted thoughts or images involving harm, sexuality, religion, morality, or other
+distressing themes</li>
+<li>Repeated checking, cleaning, counting, arranging, or repeating</li>
+<li>Constantly questioning your intentions, feelings, memories, or decisions</li>
+<li>Seeking reassurance from others, or repeatedly reassuring yourself</li>
+<li>Avoiding people, places, or situations that trigger intrusive thoughts</li>
+<li>Needing certainty, completeness, or for things to feel just right</li>
+<li>Spending significant time mentally reviewing or trying to figure something out</li>
+</ul>
+<p>If you have been afraid to say your thoughts out loud because of how someone might react, you
+can say them here. You do not have to filter your experience or find the perfect words first.</p>"""),
+   ('Exposure and response prevention', """
+<p>One of the primary treatments Roshunda uses for OCD is Exposure and Response Prevention, a
+well established, evidence based approach that changes how you respond to obsessive thoughts and
+uncertainty.</p>
+<p>ERP is not about forcing yourself into situations you are not ready for, and it does not expose
+you to actual danger. You will identify together the situations, thoughts, and experiences that
+trigger your OCD, along with the compulsions and avoidance keeping the cycle going. From there you
+build a personalized plan to approach those triggers gradually while practicing new ways of
+responding.</p>
+<p>The goal is not to prove your fears could never happen, or to make every uncomfortable thought
+disappear. It is to build your confidence in being able to sit with uncertainty and discomfort
+without letting OCD decide what you do next. You move through it collaboratively, with guidance,
+encouragement, and chances to practice between sessions.</p>"""),
+   ('What if my thoughts are disturbing or embarrassing', """
+<p>OCD can involve thoughts that feel completely opposite to your values and intentions. You may
+find yourself questioning what those thoughts say about you, or worrying that having a thought
+means you might act on it.</p>
+<p>Unwanted intrusive thoughts are not, by themselves, evidence of anyone's character or
+intentions. Part of this work is learning to recognize when OCD is pulling you into a cycle of
+fear, analysis, and attempts to be certain.</p>
+<p>Roshunda has worked with people experiencing a wide range of OCD themes, including harm,
+relationships, religion, morality, contamination, health, and sexuality. Her role is not to judge
+what shows up in your mind. It is to understand it and help you build a healthier relationship
+with it.</p>"""),
+   ('If you have tried therapy before', """
+<p>Maybe you have already been in therapy, talked at length about your fears, or tried to reason
+your way out of intrusive thoughts. Maybe you felt temporary relief and then found yourself in the
+same cycle again. That does not mean you did not try hard enough.</p>
+<p>Traditional talk therapy helps with many concerns, but OCD usually needs a more targeted
+approach. Repeatedly analyzing fears or offering reassurance can unintentionally reinforce the
+cycle. ERP focuses on responding differently rather than trying to resolve every doubt.</p>
+<p>Whether you are newly diagnosed, have lived with OCD for years, or are still working out what
+you are experiencing, you can start by talking through what has been happening.</p>"""),
+   ('What change can look like', """
+<p>Progress does not mean never having another intrusive thought.</p>
+<p>It may look like spending less time mentally reviewing, making decisions without checking
+repeatedly, returning to things you have been avoiding, or letting uncertainty be there without
+needing to resolve it. It can also mean reconnecting with relationships and parts of your life
+that OCD has gradually pushed aside.</p>
+<p><b>Your thoughts do not have to make every decision for you. There is room to live beyond
+OCD.</b></p>"""),
+  ]),
+
+ dict(f='creative-therapy.html', wash='#EAF0E2', tint='#5E7A4F', n='06',
+  nm='When words run out',
+  blurb='Creative expression in session, for the weeks when talking is not getting there.',
+  h1='When words <i>run out</i>',
+  lede='Sometimes words are not enough. And that is okay. There are other ways to explore what '
+       'you are feeling.',
+  body=[
+   ('Why creative expression', """
+<p>Roshunda has always had a love for music and creativity. She is not a formally trained artist
+or art therapist, and she will tell you that plainly. What she believes is that creative
+expression can be a meaningful way to explore emotions, find insight, and connect with yourself.</p>
+<p>Sometimes you can explain exactly what is happening in your life and still struggle to express
+how it feels. That is where creativity offers another way in.</p>
+<p>You do not need artistic skill or musical talent. This is not about making something beautiful
+or getting it right. It is about the process, not the finished thing.</p>"""),
+   ('What it looks like in session', """
+<p>Creative expression is not a separate service you book instead of therapy. It is something that
+can be part of a session when it feels useful and fits your goals.</p>
+<p>That might be drawing, journaling, music, colour, or another simple activity that helps you
+explore your thoughts and feelings. Some clients enjoy this. Others prefer to talk. Either is
+completely fine.</p>
+<p><b>You do not have to be an artist to express yourself creatively. And neither does she.</b></p>"""),
+   ('Beyond the therapy room', """
+<p>Roshunda's passion for creativity also reaches into the community through
+<a href="https://www.evolvingthruart.com/" target="_blank" rel="noopener">Evolving Thru Art</a>, a
+nonprofit focused on creating opportunities for young people to explore creative expression,
+connection, and personal growth.</p>
+<p>For community workshops and groups, see the <a href="workshops.html">workshops and groups</a>
+page.</p>"""),
   ]),
 ]
 
 DEPRESSION = dict(f='depression.html', wash='#E9EEF3', tint='#4A6076',
   nm='Depression and low motivation',
-  blurb='For the flat stretch, when everything takes more effort than it should.',
-  h1='Depression and <i>the flat stretch</i>',
-  lede='Depression is not only sadness. Often it is the slow narrowing of a life until '
-       'very little is left in it that you look forward to.',
+  blurb='For the flat stretch, when the things that once brought you joy feel out of reach.',
+  h1='Depression and <i>low motivation</i>',
+  lede='Depression is not always sadness. Sometimes it is the slow narrowing of your world until '
+       'the things that once brought you joy, connection, or purpose begin to feel out of reach.',
   body=[
-   ('What it actually looks like', """
-<p>People expect depression to feel like crying. Frequently it feels like nothing at all.
-The volume goes down on everything, good and bad alike. Getting up takes negotiation.
-Things you used to enjoy still look like things you should enjoy, and you feel guilty that
-they do not land.</p>
-<p>Some of what people bring here:</p>
+   ('What it can look like', """
+<p>Depression does not always look the way people expect. Sometimes it is crying, sadness, or
+feeling overwhelmed. Other times it is feeling disconnected, emotionally numb, irritable, or
+simply exhausted by ordinary life.</p>
+<p>Getting out of bed takes negotiation. Things you used to enjoy do not feel the same. You find
+yourself going through the motions, wondering why everything is so difficult, then criticizing
+yourself for not doing more. And sometimes you are still showing up for work, school, and family
+while quietly struggling to feel present in your own life.</p>
+<p>Some of what you may be experiencing:</p>
 <ul>
-<li>Sleeping too much, or lying awake and dreading the morning</li>
-<li>Doing the bare minimum and calling yourself lazy for it</li>
-<li>Withdrawing from people, then feeling worse about being alone</li>
-<li>A running commentary about your own worth that you would never aim at anyone else</li>
-<li>Going through the motions competently while feeling absent from your own life</li>
+<li>Sleeping more than usual, struggling to sleep, or waking already exhausted</li>
+<li>Difficulty finding motivation for responsibilities or things you once enjoyed</li>
+<li>Withdrawing from people even when you miss feeling connected</li>
+<li>Feeling hopeless, numb, irritable, or overwhelmed</li>
+<li>Being hard on yourself, or feeling like you are never doing enough</li>
+<li>Struggling with concentration, decisions, or finishing everyday tasks</li>
+<li>Feeling disconnected from yourself, your relationships, or your life</li>
 </ul>"""),
-   ('How Roshunda works with it', """
-<p>Two approaches carry most of this work.</p>
-<p><b>Cognitive behavioral therapy</b> takes the running commentary seriously as something
-to examine rather than obey. Depression makes very confident claims about you, your future,
-and what other people think. We slow those down and check them against the evidence.</p>
-<p><b>Behavioral activation</b> works from the other direction, and it is often the piece
-that moves first. Waiting to feel motivated before you act keeps you waiting, because with
-depression the motivation tends to arrive after the action rather than before it. So we
-start small and deliberately, rebuilding contact with the things that used to give your
-week its shape.</p>
-<p>It is structured work, and you will have things to try between sessions. Not homework
-for its own sake. Just the recognition that an hour a week is not where most of your life
-happens.</p>"""),
-   ('A word about scope', """
-<p>If medication is worth considering, Roshunda will say so and help you find a prescriber.
-She does not prescribe, and therapy and medication are not an either or.</p>
-<p>If you are having thoughts of harming yourself, please say so directly, early. It will
-not shock her and it will not end the work. If you are in danger right now, call or text
-<b>988</b>.</p>"""),
+   ('How we work through it', """
+<p>You start by understanding what depression looks like for you, how it is affecting your days,
+and what you have been carrying. Roshunda's approach uses cognitive behavioral therapy and
+behavioral activation, along with other strategies based on your needs and goals.</p>
+<p><b>Cognitive behavioral therapy</b> explores the thoughts and beliefs feeding hopelessness,
+guilt, or low self worth. Together you recognize patterns, question unhelpful conclusions, and
+build more balanced ways of responding to yourself.</p>
+<p><b>Behavioral activation</b> works from the other direction, reconnecting you with activities,
+relationships, and routines that bring meaning, enjoyment, or a sense of accomplishment. When you
+are depressed, waiting until you feel motivated tends to keep you stuck. So you start small, with
+steps that fit your current capacity rather than expecting everything to change at once.</p>
+<p>There may be chances to practice something between sessions. This is not about adding pressure.
+It is about building momentum, noticing progress, and making change at a pace that works.</p>
+<p>Some weeks progress looks like reconnecting with something you enjoy. Other weeks it looks like
+getting out of bed, reaching out to someone, or simply showing up. <b>Small steps still
+count.</b></p>"""),
+   ('Additional support when needed', """
+<p>Depression affects people differently, and sometimes therapy is only one part of what someone
+needs.</p>
+<p>If medication may help, you can talk through a referral to a qualified prescriber. Therapy and
+medication can work together, depending on your needs and preferences.</p>
+<div class="callout">
+<p>If you are experiencing thoughts of self harm or suicide, Roshunda encourages you to share that
+openly. Those conversations matter, and they are met with care, without judgment, and with your
+safety in mind. Depending on what you need, additional services or a different level of support
+may be recommended.</p>
+<p>If you are in an immediate mental health crisis, call or text <b>988</b>. If you are in
+immediate danger or need emergency medical help, call 911 or go to the nearest emergency
+department.</p>
+</div>"""),
+   ('What change can look like', """
+<p>The goal is not to force yourself to be happy or productive all the time. It is to gradually
+reconnect with yourself, recognize what you need, and make space for the parts of life that matter
+to you.</p>
+<p>There may still be difficult days. You do not have to navigate them without support.</p>
+<p><b>You do not have to feel motivated to begin. Sometimes beginning is how we make room for
+hope.</b></p>"""),
   ])
 
 SERVICES.append(DEPRESSION)
@@ -262,15 +372,16 @@ FAQ = [
  ('Who can actually work with you?',
   """<p>Therapy clients need to be physically located in <b>Texas, Virginia, or Colorado</b>
   at the time of the session. That is a licensing rule, not a preference. Roshunda is a
-  Licensed Professional Counselor in all three.</p>
+  Licensed Professional Counselor in all three, and sees clients in person in Katy, Texas.</p>
   <p>Workshops, classes, and creative programming are educational rather than clinical, so
   those are open to anyone anywhere. See <a href="workshops.html">workshops and groups</a>.</p>"""),
  ('Is everything online?',
-  """<p>For now, yes. All sessions are held over a secure video platform. You will get a link
-  before each appointment and you do not need to install anything unusual.</p>
-  <p><b>In-person visits in Texas are coming soon.</b> An office is in the works. If sitting
-  in the same room matters to you, mention it on the consult call and Roshunda will tell you
-  where that stands.</p>
+  """<p>Not everything. <b>In person appointments are available in Katy, Texas</b>, with limited
+  scheduling options, so mention it on the consult call if sitting in the same room matters to
+  you.</p>
+  <p>Virtual sessions are held over a secure video platform and are open to clients physically
+  located in Texas, Virginia, or Colorado. You get a link before each appointment and do not need
+  to install anything unusual.</p>
   <p>You do need somewhere you can talk without managing who might hear you. A car in a
   parking lot counts. Plenty of good work has happened in a parked car.</p>"""),
  ('What does it cost?',
@@ -362,8 +473,8 @@ here and say whether it uses cookies.]</span></p>
 <p>This site sets no advertising cookies and runs no third party trackers. Web fonts are
 loaded from Google Fonts, which means your browser makes a request to Google to fetch them.</p>"""),
  ('Who else touches it', """
-<p>Form submissions and email are handled by <span class="todo">[email and form provider,
-e.g. Kit and Google Workspace]</span>. Scheduling and the clinical record live in
+<p>The consult request form is delivered by EmailJS, workshop interest signups are held in
+Kit, and email is handled by Google Workspace. Scheduling and the clinical record live in
 <span class="todo">[EHR, e.g. SimplePractice]</span>, which is a separate system with its own
 protections and its own agreement.</p>
 <p>Information is not sold, rented, or traded. It is disclosed only where the law requires
@@ -410,7 +521,7 @@ when you have completed intake and Roshunda has agreed in writing to work with y
 from a qualified professional. Do not delay seeking care because of something you read here.</p>"""),
  ('Scope of practice and location', """
 <p>Roshunda M. Hartison is a Licensed Professional Counselor in Texas (license 86566),
-Virginia, and Colorado. Therapy is available only to clients physically located in one of
+Virginia (license 86566), and Colorado (license LPC.0021147). Therapy is available only to clients physically located in one of
 those states at the time of session, and you agree to tell her if your location changes.</p>
 <p>Workshops, classes, and creative programming are educational, are open to participants
 anywhere, and are not therapy. Attending one does not make you a client.</p>"""),
@@ -583,20 +694,23 @@ def build(HEAD, GREEN, SCRIPT, swap_nav, build_foot):
     <div class="prose">
       <h2 class="rise">How sessions work.</h2>
       <div class="prose-body rise" data-d="1">
-        <p>Sessions are 50 minutes, held over secure video, usually weekly to start. Roshunda
-        has worked in mental health for sixteen years, five and a half of them as a licensed
-        clinician, across community mental health, shelters, juvenile detention, and IDD
-        services before private practice. Which is a long way of saying very little will
-        surprise her.</p>
-        <p>She is warm and she is direct. You will get an actual opinion rather than a year
-        of your own words handed back to you.</p>
-        <p><b>In-person visits in Texas are coming soon.</b> The practice is starting online
-        while an office is set up, so if you would rather sit in the same room, say so when
-        you reach out and Roshunda will let you know as soon as dates are set.</p>
-        <p><b>Therapy is available only to clients physically located in Texas, Virginia, or
-        Colorado at the time of session.</b> Workshops and creative programming are
-        educational, are not therapy, and are open to anyone anywhere. See
-        <a href="workshops.html">workshops and groups</a>.</p>
+        <p>Sessions are typically 50 minutes, available virtually or in person in Katy, Texas.
+        Most people begin weekly, and the frequency depends on your needs and goals.</p>
+        <p>Roshunda's years in mental health have taught her that no two people experience life's
+        challenges the same way, so the work is collaborative and built around you, meeting you
+        where you are while helping you move toward where you want to be.</p>
+        <p>Her style is warm, collaborative, and direct. She wants to hear your story and
+        understand your experience, and she will also ask questions, challenge patterns when it
+        helps, and encourage you to put what you are learning into practice. Therapy is not about
+        being told how to live. It is about understanding yourself, building confidence in your
+        decisions, and making changes that hold.</p>
+        <h3>Session availability</h3>
+        <p><b>In person</b> appointments are available in Katy, Texas, with limited scheduling
+        options.</p>
+        <p><b>Virtual</b> therapy is available to clients physically located in Texas, Virginia, or
+        Colorado at the time of their session.</p>
+        <p>Workshops and creative programming are educational experiences, not psychotherapy
+        services. More on the <a href="workshops.html">workshops and groups</a> page.</p>
       </div>
     </div>
   </div>
