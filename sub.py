@@ -2,7 +2,7 @@
 # individual service pages, the FAQ, and the four legal pages.
 import re
 
-UPDATED = 'Last updated <span class="todo">[DATE]</span>'
+UPDATED = 'Last updated October 2026'
 
 # ---------------------------------------------------------------- services --
 
@@ -385,13 +385,15 @@ FAQ = [
   <p>You do need somewhere you can talk without managing who might hear you. A car in a
   parking lot counts. Plenty of good work has happened in a parked car.</p>"""),
  ('What does it cost?',
-  """<p>Roshunda's self pay rate is <span class="todo">$[RATE]</span> for a 50 minute
-  session. A limited number of <span class="todo">sliding scale</span> spots are available;
+  """<p>Roshunda's self pay rate is $175 for a 50 minute individual session and $200 for a
+  couples session. A limited number of sliding scale spots are available;
   ask on the consult call and she will tell you honestly whether one is open.</p>
   <p>If you are paying out of pocket, you are entitled to a written estimate before you
   start. See <a href="good-faith-estimate.html">Good Faith Estimate</a>.</p>"""),
  ('Do you take insurance?',
-  """<p><span class="todo">[Insurance: confirm which plans, and whether via Headway]</span></p>
+  """<p>Yes. Roshunda is in network with Aetna, Anthem, BlueCross BlueShield, Cigna and Evernorth,
+  and UnitedHealthcare and Optum, along with select employee assistance programs (EAPs).
+  Coverage varies by plan, so it is worth confirming your benefits before the first session.</p>
   <p>If your plan is not accepted directly, many plans reimburse a portion of out of network
   care. Roshunda can provide a superbill, which is an itemized receipt you submit to your
   insurer yourself. Reimbursement is between you and them, and it is worth calling to ask
@@ -424,8 +426,9 @@ FAQ = [
   therapeutic relationship, and is not a substitute for treatment.</p>
   <p>That separation is why workshops can be open nationally while therapy cannot.</p>"""),
  ('What is your cancellation policy?',
-  """<p><span class="todo">[Confirm: typically 24 or 48 hours notice, and the fee for a late
-  cancel or no show]</span></p>
+  """<p>Please give at least 24 hours notice if you need to cancel or reschedule. Sessions
+  cancelled with less notice, or missed without notice, may be charged the full session fee.
+  Insurance does not cover missed sessions.</p>
   <p>Life happens and she is a reasonable person about genuine emergencies. The policy exists
   so that a reserved hour means something.</p>"""),
  ('Is what I say confidential?',
@@ -445,12 +448,7 @@ FAQ = [
 
 # ------------------------------------------------------------------ legal --
 
-DISCLAIM = """
-<div class="callout">
-  <p><b>For Roshunda, before launch.</b> These pages are a solid, standard starting point,
-  not legal advice. Anything highlighted needs a real answer from you, and it is worth
-  having your attorney or your liability carrier read the final wording once.</p>
-</div>"""
+DISCLAIM = ""
 
 PRIVACY = [
  ('What this covers', """
@@ -466,16 +464,15 @@ advertising on this site.</p>"""),
 and whatever you write in the message field. That is used to reply to you and, for the
 interest list, to tell you when workshop dates are set.</p>
 <h3>Information collected automatically</h3>
-<p>The site is hosted on <span class="todo">[Cloudflare Pages]</span>, which keeps standard
+<p>The site is hosted on Cloudflare Pages, which keeps standard
 server logs including IP address, browser type, and pages requested. These are used for
-security and reliability. <span class="todo">[If analytics are added later, name the tool
-here and say whether it uses cookies.]</span></p>
+security and reliability. The site does not currently use analytics.</p>
 <p>This site sets no advertising cookies and runs no third party trackers. Web fonts are
 loaded from Google Fonts, which means your browser makes a request to Google to fetch them.</p>"""),
  ('Who else touches it', """
 <p>The consult request form is delivered by EmailJS, workshop interest signups are held in
 Kit, and email is handled by Google Workspace. Scheduling and the clinical record live in
-<span class="todo">[EHR, e.g. SimplePractice]</span>, which is a separate system with its own
+SimplePractice, which is a separate system with its own
 protections and its own agreement.</p>
 <p>Information is not sold, rented, or traded. It is disclosed only where the law requires
 it, or where you have asked for it to be.</p>"""),
@@ -498,7 +495,8 @@ and the right not to have personal data sold. This practice does not sell person
 Requests go to the same address.</p>"""),
  ('Children', """
 <p>This site is not directed at children under 13 and does not knowingly collect their
-information. <span class="todo">[Confirm whether Roshunda sees minors, and at what age.]</span></p>"""),
+information. Therapy for anyone under 18 begins only with the consent of a parent or
+legal guardian.</p>"""),
  ('Changes', """
 <p>If this notice changes materially, the date at the top changes and the new version is
 posted here. Questions go to
@@ -557,7 +555,8 @@ site.</p>
 from professional services actually rendered to a client.</p>"""),
  ('Governing law and changes', """
 <p>These terms are governed by the laws of the State of Texas, without regard to conflict of
-law rules. <span class="todo">[Confirm venue with counsel.]</span></p>
+law rules. Any dispute will be handled in the state or federal courts located in
+Texas.</p>
 <p>Terms may be updated; the date at the top will change when they are. Continuing to use the
 site after that means you accept the revision.</p>
 <p>Questions go to
@@ -586,10 +585,10 @@ codes, and the total expected charge. Timing works like this:</p>
 course of care, for example a stated number of sessions over twelve months, and says clearly
 that the actual number may differ as the work develops.</p>"""),
  ('Current rates', """
-<p>Individual therapy, 50 minutes: <span class="todo">$[RATE]</span></p>
-<p>Initial intake session: <span class="todo">$[INTAKE RATE]</span></p>
-<p><span class="todo">[Add any other billable service and its rate, and note the sliding
-scale if one is offered.]</span></p>
+<p>Initial intake session: $175</p>
+<p>Individual therapy, 50 minutes: $175</p>
+<p>Couples therapy, 50 minutes: $200</p>
+<p>A limited number of sliding scale spots are available. Ask on the consult call.</p>
 <p>An estimate is an estimate. It is not a contract and it does not commit you to any number
 of sessions.</p>"""),
  ('If your bill is higher than your estimate', """
@@ -627,9 +626,8 @@ to reduce motion</li>
 <li>Form fields have real labels, and errors are described in text rather than by colour alone</li>
 </ul>"""),
  ('Known gaps', """
-<p><span class="todo">[Update after an audit. If anything is known to fall short, name it
-here with a date for the fix. Being specific about a gap is better than a blanket claim of
-full compliance.]</span></p>"""),
+<p>No known issues as of the last review in October 2026. If you find one, please tell us
+using the address below so it can be fixed.</p>"""),
  ('Sessions themselves', """
 <p>Accessibility in the therapy is a separate question and a real one. If you need captions,
 a screen reader friendly intake process, extra time, materials in a different format, or any
@@ -639,7 +637,7 @@ you do not need to explain why.</p>"""),
 <p>If you hit a barrier on this site, please write to
 <a href="mailto:hello@bloomandrisetherapy.com">hello@bloomandrisetherapy.com</a> and say what
 page you were on and what happened. Reports get a reply within
-<span class="todo">[2 business days]</span> and are taken seriously.</p>"""),
+two business days and are taken seriously.</p>"""),
 ]
 
 # ------------------------------------------------------------------ build --
