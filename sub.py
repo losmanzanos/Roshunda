@@ -665,6 +665,7 @@ def build(HEAD, GREEN, SCRIPT, swap_nav, build_foot):
             if flag not in keep:
                 head = re.sub(r'(--%s:)url\("[^"]*"\)' % var, r'\1none', head, count=1)
         head = swap_nav(head, current)
+        head = head.replace('__CANON__', fname)
         out = head + '<main id="main">\n' + body + '</main>\n\n' + FOOT + SCRIPT
         open(fname, 'w').write(out)
         print(fname, round(len(out) / 1024), 'KB')

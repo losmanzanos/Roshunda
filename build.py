@@ -32,6 +32,21 @@ HTML = r'''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bloom &amp; Rise — Roshunda M. Hartison, MEd, LPC</title>
 <meta name="description" content="Therapy for anxiety, identity and self-trust, body image, and depression. Virtual sessions in Texas, Virginia, and Colorado, and in person in Katy, Texas.">
+<link rel="canonical" href="https://bloomandrisetherapy.com/__CANON__">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bloom &amp; Rise Therapy">
+<meta property="og:title" content="Bloom &amp; Rise Therapy | Roshunda M. Hartison, MEd, LPC">
+<meta property="og:description" content="Therapy for anxiety, identity and self-trust, body image, and depression. Virtual in Texas, Virginia, and Colorado, and in person in Katy, Texas.">
+<meta property="og:url" content="https://bloomandrisetherapy.com/__CANON__">
+<meta property="og:image" content="https://bloomandrisetherapy.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService",
+"name":"Bloom & Rise Therapy","url":"https://bloomandrisetherapy.com/",
+"email":"hello@bloomandrisetherapy.com","telephone":"+1-346-550-9348",
+"address":{"@type":"PostalAddress","addressLocality":"Katy","addressRegion":"TX","addressCountry":"US"},
+"areaServed":["Texas","Virginia","Colorado"],
+"founder":{"@type":"Person","name":"Roshunda M. Hartison","jobTitle":"Licensed Professional Counselor","honorificSuffix":"MEd, LPC"},
+"knowsAbout":["Anxiety","Identity and self-trust","Body image","Depression","Obsessive-compulsive disorder","Exposure and response prevention"]}</script>
 <link rel="icon" href="__FAV__">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
