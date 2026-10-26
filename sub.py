@@ -392,8 +392,9 @@ FAQ = [
   start. See <a href="good-faith-estimate.html">Good Faith Estimate</a>.</p>"""),
  ('Do you take insurance?',
   """<p>Yes. Roshunda is in network with Aetna, Anthem, BlueCross BlueShield, Cigna and Evernorth,
-  and UnitedHealthcare and Optum, along with select employee assistance programs (EAPs).
-  Coverage varies by plan, so it is worth confirming your benefits before the first session.</p>
+  and UnitedHealthcare and Optum, along with select employee assistance programs (EAPs), through
+  Headway. Headway handles insurance billing, so you see your copay up front. Coverage varies
+  by plan, so it is worth confirming your benefits before the first session.</p>
   <p>If your plan is not accepted directly, many plans reimburse a portion of out of network
   care. Roshunda can provide a superbill, which is an itemized receipt you submit to your
   insurer yourself. Reimbursement is between you and them, and it is worth calling to ask
@@ -471,9 +472,10 @@ security and reliability. The site does not currently use analytics.</p>
 loaded from Google Fonts, which means your browser makes a request to Google to fetch them.</p>"""),
  ('Who else touches it', """
 <p>The consult request form is delivered by EmailJS, workshop interest signups are held in
-Kit, and email is handled by Google Workspace. Scheduling and the clinical record live in
-SimplePractice, which is a separate system with its own
-protections and its own agreement.</p>
+Kit, and email is handled by Google Workspace. For clients using insurance, scheduling,
+billing, and the clinical record are handled through Headway. For private pay clients, they
+live in SimplePractice. Each is a separate system with its own protections and its own
+agreement.</p>
 <p>Information is not sold, rented, or traded. It is disclosed only where the law requires
 it, or where you have asked for it to be.</p>"""),
  ('Not a secure channel', """
@@ -495,8 +497,8 @@ and the right not to have personal data sold. This practice does not sell person
 Requests go to the same address.</p>"""),
  ('Children', """
 <p>This site is not directed at children under 13 and does not knowingly collect their
-information. Therapy for anyone under 18 begins only with the consent of a parent or
-legal guardian.</p>"""),
+information. Roshunda works with clients 15 and older, and therapy for anyone under 18
+begins only with the consent of a parent or legal guardian.</p>"""),
  ('Changes', """
 <p>If this notice changes materially, the date at the top changes and the new version is
 posted here. Questions go to
@@ -676,7 +678,8 @@ def build(HEAD, GREEN, SCRIPT, swap_nav, build_foot):
   <div class="shell">
     <p class="kicker">Services</p>
     <h1>What we can <i style="color:var(--orange-deep)">work on</i> together.</h1>
-    <p class="lede">Individual therapy, online, for adults in Texas, Virginia, and Colorado.
+    <p class="lede">Therapy for adults and teens 15 and up, virtual across Texas, Virginia, and
+    Colorado and in person in Katy.
     Most people arrive with more than one of these at once, which is normal and does not
     need sorting out before you call.</p>
   </div>
