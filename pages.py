@@ -21,6 +21,20 @@ SEC = {
  'contact' : cut('<section class="contact" id="contact">', '</main>'),
 }
 
+from sub import set_social
+DESCS = {
+ 'index.html': 'Therapy for anxiety, identity, body image, depression, and OCD with Roshunda M. Hartison, MEd, LPC. Virtual in TX, VA, and CO, in person in Katy, TX.',
+ 'feels.html': 'What working with Roshunda feels like: how sessions go, the long middle of change, and the free 15 minute consult. Virtual in TX, VA, and CO, in person in Katy.',
+ 'about.html': 'Meet Roshunda M. Hartison, MEd, LPC. Sixteen years in mental health, licensed in Texas, Virginia, and Colorado, with in person sessions in Katy, Texas.',
+ 'workshops.html': 'Chew & Chat and other creative community workshops from Bloom & Rise. Educational, not clinical, and open to participants in any state. Join the interest list.'.replace('&','&amp;'),
+ 'contact.html': 'Book a free 15 minute consult with Roshunda M. Hartison, MEd, LPC. Virtual therapy in Texas, Virginia, and Colorado, and in person in Katy, Texas.',
+}
+H1 = {
+ 'feels.html': 'What therapy with Roshunda feels like',
+ 'about.html': 'About Roshunda M. Hartison, MEd, LPC',
+ 'workshops.html': 'Workshops and groups',
+ 'contact.html': 'Book a free consult',
+}
 PAGES = {
  'index.html'    : (['hero','intro','becoming','sky'],'Bloom &amp; Rise Therapy | Roshunda M. Hartison, MEd, LPC'),
  'feels.html'    : (['work','contact'],               'What it feels like | Bloom &amp; Rise Therapy'),
@@ -85,10 +99,11 @@ for fname,(parts,title) in PAGES.items():
     # real nav
     head = swap_nav(head, fname)
     head = head.replace('__CANON__', '' if fname == 'index.html' else fname)
+    head = set_social(head, title, DESCS[fname])
 
     body = ''.join(SEC[p] for p in parts)
     if 'hero' not in parts:
-        body = '<div class="page-top">' + body + '</div>'
+        body = '<div class="page-top"><h1 class="sr-only">' + H1[fname] + '</h1>' + body + '</div>'
 
     out = head + '<main id="main">\n' + body + '</main>\n\n' + build_foot(GREEN) + SCRIPT
     open(fname,'w').write(out)
@@ -96,3 +111,22 @@ for fname,(parts,title) in PAGES.items():
 
 import sub
 sub.build(HEAD, GREEN, SCRIPT, swap_nav, build_foot)
+
+# ---- 404 page (Cloudflare Pages serves 404.html with a real 404 status)
+import re as _re
+_s = open('faq.html').read()
+_i = _s.index('<main id="main">'); _j = _s.index('</main>')
+_body = '''<main id="main">
+<header class="pagehead"><div class="shell">
+  <p class="kicker">Page not found</p>
+  <h1>This page has <i style="color:var(--orange-deep)">moved on.</i></h1>
+  <p class="lede">The link may be old or mistyped. Everything is still here.</p>
+  <p style="margin-top:2rem"><a class="cta" href="index.html"><span class="dot"></span>Back to the homepage</a></p>
+</div></header>
+'''
+_s = _s[:_i] + _body + _s[_j:]
+_s = _re.sub(r'<title>.*?</title>', '<title>Page not found | Bloom &amp; Rise Therapy</title>', _s, count=1)
+_s = _re.sub(r'<link rel="canonical"[^>]*>', '<meta name="robots" content="noindex">', _s, count=1)
+_s = _s.replace('href="index.html"', 'href="/"').replace('href="', 'href="/').replace('href="//', 'href="/').replace('href="/https', 'href="https').replace('href="/mailto', 'href="mailto').replace('href="/tel', 'href="tel').replace('href="/#', 'href="#').replace('href="/data:', 'href="data:')
+open('404.html', 'w').write(_s)
+print('404.html', round(len(_s)/1024), 'KB')

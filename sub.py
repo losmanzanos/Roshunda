@@ -2,6 +2,14 @@
 # individual service pages, the FAQ, and the four legal pages.
 import re
 
+def set_social(head, title, desc):
+    import re as _re
+    t = _re.sub(r'\s*\|\s*Bloom &amp; Rise Therapy$', '', title)
+    head = _re.sub(r'(<meta property="og:title" content=")[^"]*(">)', lambda m: m.group(1) + title + m.group(2), head, count=1)
+    head = _re.sub(r'(<meta property="og:description" content=")[^"]*(">)', lambda m: m.group(1) + desc + m.group(2), head, count=1)
+    head = _re.sub(r'(<meta name="description" content=")[^"]*(">)', lambda m: m.group(1) + desc + m.group(2), head, count=1)
+    return head
+
 UPDATED = 'Last updated October 2026'
 
 # ---------------------------------------------------------------- services --
@@ -467,7 +475,7 @@ interest list, to tell you when workshop dates are set.</p>
 <h3>Information collected automatically</h3>
 <p>The site is hosted on Cloudflare Pages, which keeps standard
 server logs including IP address, browser type, and pages requested. These are used for
-security and reliability. The site does not currently use analytics.</p>
+security and reliability. Visits are counted with Cloudflare Web Analytics, which does not use cookies or collect personal information.</p>
 <p>This site sets no advertising cookies and runs no third party trackers. Web fonts are
 loaded from Google Fonts, which means your browser makes a request to Google to fetch them.</p>"""),
  ('Who else touches it', """
@@ -658,8 +666,7 @@ def build(HEAD, GREEN, SCRIPT, swap_nav, build_foot):
     def page(fname, title, desc, body, current='', keep=()):
         head = HEAD
         head = re.sub(r'<title>.*?</title>', '<title>%s</title>' % title, head, count=1)
-        head = re.sub(r'(<meta name="description" content=")[^"]*(">)',
-                      lambda m: m.group(1) + desc + m.group(2), head, count=1)
+        head = set_social(head, title, desc)
         # only carry the base64 artwork a page actually uses
         for var, flag in (('ink-src', 'ink'), ('flit-src', 'flit'), ('bot-src', 'bot')):
             if flag not in keep:
@@ -719,8 +726,8 @@ def build(HEAD, GREEN, SCRIPT, swap_nav, build_foot):
 </section>
 %s""" % (rows, CONSULT)
     page('services.html', 'Services | Bloom &amp; Rise Therapy',
-         'Individual online therapy for anxiety, OCD, body image, identity, and self trust. '
-         'Texas, Virginia, and Colorado.', body, 'services.html', keep=('bot',))
+         'Therapy for anxiety, identity and self trust, body image, depression, and OCD. '
+         'Virtual in Texas, Virginia, and Colorado, and in person in Katy, Texas.', body, 'services.html', keep=('bot',))
 
     # ---- individual service pages
     for i, s in enumerate(SERVICES):
