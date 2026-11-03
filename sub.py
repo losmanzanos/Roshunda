@@ -521,7 +521,7 @@ when you have completed intake and Roshunda has agreed in writing to work with y
 from a qualified professional. Do not delay seeking care because of something you read here.</p>"""),
  ('Scope of practice and location', """
 <p>Roshunda M. Hartison is a Licensed Professional Counselor in Texas (license 86566),
-Virginia (license 86566), and Colorado (license LPC.0021147). Therapy is available only to clients physically located in one of
+Virginia (license 0701012957), and Colorado (license LPC.0021147). Therapy is available only to clients physically located in one of
 those states at the time of session, and you agree to tell her if your location changes.</p>
 <p>Workshops, classes, and creative programming are educational, are open to participants
 anywhere, and are not therapy. Attending one does not make you a client.</p>"""),
