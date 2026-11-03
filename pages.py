@@ -98,7 +98,7 @@ for fname,(parts,title) in PAGES.items():
     head = head.replace('@media (prefers-reduced-motion:reduce){', PAGECSS + '@media (prefers-reduced-motion:reduce){',1)
     # real nav
     head = swap_nav(head, fname)
-    head = head.replace('__CANON__', '' if fname == 'index.html' else fname)
+    head = head.replace('__CANON__', '' if fname == 'index.html' else fname[:-5])
     head = set_social(head, title, DESCS[fname])
 
     body = ''.join(SEC[p] for p in parts)
