@@ -694,6 +694,7 @@ def build(HEAD, GREEN, SCRIPT, swap_nav, build_foot):
 
 <section class="band">
   <div class="shell">
+    <h2 class="sr-only">Areas of focus</h2>
     <div class="svc-list">%s</div>
   </div>
 </section>

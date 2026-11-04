@@ -1,7 +1,11 @@
 import base64, os
 
+import os, shutil
 def b64(p, mime='image/webp'):
-    return 'data:%s;base64,%s' % (mime, base64.b64encode(open(p,'rb').read()).decode())
+    # artwork is served as real, cacheable files from img/ instead of inline data URIs
+    os.makedirs('img', exist_ok=True)
+    shutil.copyfile(p, os.path.join('img', p))
+    return 'img/' + p
 
 PORTRAIT = b64('rosh-plate.webp')
 
@@ -19,7 +23,7 @@ HAND       = b64('hand.webp')
 FLIT       = b64('flit.webp')
 BOTANICAL  = b64('bot.webp')
 LOGO       = b64('logo-magnolia.webp')
-FAV        = b64('logo-fav.png','image/png')
+FAV        = 'img/favicon-32.png'
 # Time of day triptych: dawn, midday, dusk
 SKY_1      = b64('tod-1.webp')
 SKY_2      = b64('tod-2.webp')
@@ -30,6 +34,7 @@ HTML = r'''<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F7F0E3">
 <meta name="google-site-verification" content="TbEqL08-pkf6bzc8P5Moe1ZbmYAeASDsT83x_KuNr4I">
 <title>Bloom &amp; Rise — Roshunda M. Hartison, MEd, LPC</title>
 <meta name="description" content="Therapy for anxiety, identity and self-trust, body image, and depression. Virtual sessions in Texas, Virginia, and Colorado, and in person in Katy, Texas.">
@@ -43,12 +48,15 @@ HTML = r'''<!DOCTYPE html>
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService",
 "name":"Bloom & Rise Therapy","url":"https://www.bloomandrisetherapy.com/",
+"image":"https://www.bloomandrisetherapy.com/og.png","logo":"https://www.bloomandrisetherapy.com/img/logo-magnolia.webp",
+"priceRange":"$175-$200","sameAs":["https://www.psychologytoday.com/us/therapists/roshunda-hartison-richmond-tx/911988"],
 "email":"hello@bloomandrisetherapy.com","telephone":"+1-346-550-9348",
 "address":{"@type":"PostalAddress","addressLocality":"Katy","addressRegion":"TX","addressCountry":"US"},
 "areaServed":["Texas","Virginia","Colorado"],
 "founder":{"@type":"Person","name":"Roshunda M. Hartison","jobTitle":"Licensed Professional Counselor","honorificSuffix":"MEd, LPC"},
 "knowsAbout":["Anxiety","Identity and self-trust","Body image","Depression","Obsessive-compulsive disorder","Exposure and response prevention"]}</script>
-<link rel="icon" href="__FAV__">
+<link rel="icon" href="__FAV__" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
@@ -574,7 +582,7 @@ footer::before{display:none}
 .foot-cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:0}
 @media (max-width:760px){.foot-cols{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}.foot-cols > :first-child{grid-column:1 / -1}}
 @media (max-width:340px){.foot-cols{grid-template-columns:1fr}}
-.foot-cols h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-deep);font-weight:600;margin:0 0 1rem}
+.foot-cols h2.foot-h{font-family:'Inter Tight',system-ui,sans-serif;font-variation-settings:normal;line-height:1.4;font-style:normal;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-deep);font-weight:600;margin:0 0 1rem}
 .foot-cols ul{list-style:none;padding:0;margin:0}
 .foot-cols li{margin-bottom:.6rem}
 .foot-cols a{text-decoration:none;transition:color .3s}
@@ -583,7 +591,7 @@ footer::before{display:none}
 .fine p{max-width:52ch;margin:0}
 .fine b{color:rgba(251,246,234,.78);font-weight:500}
 .fine a{color:rgba(251,246,234,.78)}
-.fine .full{grid-column:1/-1;padding-top:1rem;border-top:1px solid rgba(251,246,234,.14)}
+.fine .full{grid-column:1/-1;max-width:none;padding-top:1rem;border-top:1px solid rgba(251,246,234,.14)}
 
 /* ---------------- phone polish ---------------- */
 @media (max-width:600px){
@@ -972,11 +980,11 @@ footer::before{display:none}
     <p class="foot-mark"><img class="foot-logo" src="__LOGO__" alt="" width="640" height="337" loading="lazy"><span class="sr-only">Bloom &amp; Rise Therapy</span></p>
     <div class="foot-cols">
       <div>
-        <h4>The practice</h4>
+        <h2 class="foot-h">The practice</h2>
         <p style="margin:0;max-width:34ch">Roshunda M. Hartison, MEd, LPC. In person in Katy, Texas, and online across Texas, Virginia, and Colorado. Creative workshops for everywhere else.</p>
       </div>
       <div>
-        <h4>Explore</h4>
+        <h2 class="foot-h">Explore</h2>
         <ul>
           <li><a href="#becoming">Becoming</a></li>
           <li><a href="#work">What it feels like</a></li>
@@ -986,7 +994,7 @@ footer::before{display:none}
         </ul>
       </div>
       <div>
-        <h4>Get in touch</h4>
+        <h2 class="foot-h">Get in touch</h2>
         <ul>
           <li><a href="mailto:hello@bloomandrisetherapy.com">hello@bloomandrisetherapy.com</a></li>
           <li><a href="tel:+13465509348">(346) 550 9348</a></li>

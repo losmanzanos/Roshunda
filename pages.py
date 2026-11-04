@@ -36,7 +36,7 @@ H1 = {
  'contact.html': 'Book a free consult',
 }
 PAGES = {
- 'index.html'    : (['hero','intro','becoming','sky'],'Bloom &amp; Rise Therapy | Roshunda M. Hartison, MEd, LPC'),
+ 'index.html'    : (['hero','intro','becoming','sky'],'Bloom &amp; Rise Therapy | Therapist in Katy, TX &amp; Online'),
  'feels.html'    : (['work','contact'],               'What it feels like | Bloom &amp; Rise Therapy'),
  'about.html'    : (['about','contact'],              'About Roshunda | Bloom &amp; Rise Therapy'),
  'workshops.html': (['shops'],                        'Workshops &amp; groups | Bloom &amp; Rise Therapy'),
@@ -127,6 +127,6 @@ _body = '''<main id="main">
 _s = _s[:_i] + _body + _s[_j:]
 _s = _re.sub(r'<title>.*?</title>', '<title>Page not found | Bloom &amp; Rise Therapy</title>', _s, count=1)
 _s = _re.sub(r'<link rel="canonical"[^>]*>', '<meta name="robots" content="noindex">', _s, count=1)
-_s = _s.replace('href="index.html"', 'href="/"').replace('href="', 'href="/').replace('href="//', 'href="/').replace('href="/https', 'href="https').replace('href="/mailto', 'href="mailto').replace('href="/tel', 'href="tel').replace('href="/#', 'href="#').replace('href="/data:', 'href="data:')
+_s = _s.replace('href="index.html"', 'href="/"').replace('href="', 'href="/').replace('href="//', 'href="/').replace('href="/https', 'href="https').replace('href="/mailto', 'href="mailto').replace('href="/tel', 'href="tel').replace('href="/#', 'href="#').replace('href="/data:', 'href="data:').replace('src="img/', 'src="/img/').replace('url(img/', 'url(/img/').replace('url("img/', 'url("/img/').replace('url(fonts/', 'url(/fonts/')
 open('404.html', 'w').write(_s)
 print('404.html', round(len(_s)/1024), 'KB')
